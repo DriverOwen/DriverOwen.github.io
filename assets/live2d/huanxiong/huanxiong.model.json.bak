@@ -1,0 +1,31 @@
+{
+	"type":"Live2D Model Setting",
+	"name":"huanxiong",
+	"model":"huanxiong.moc",
+	"textures":[
+		"textures/textures.png"
+	],
+	"expressions":[
+		{"name":"f01.exp.json","file":"expression/f01.exp.json"}
+	],
+	"layout":
+	{
+		"center_x":0,
+		"y":2.2,
+		"width":2.5
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"}
+	],
+	"motions":{
+		"idle":[
+			{"file":"motions/idle.mtn","fade_in":0,"fade_out":0}
+		],
+		"tap_body":
+		[
+			{"file":"motions/idle1.mtn","fade_in":1000,"fade_out":0}
+		]
+	}
+}

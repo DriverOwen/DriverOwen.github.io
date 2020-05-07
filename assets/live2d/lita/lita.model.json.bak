@@ -1,0 +1,29 @@
+{
+	"type":"Live2D Model Setting",
+	"name":"lita",
+	"model":"lita.moc",
+	"textures":[
+		"textures/texture.png"
+	],
+	"expressions":[
+		{"name":"lita.exp.json","file":"expresstion/lita.exp.json"}
+	],
+	"layout":
+	{
+		"center_x":0.2,
+		"y":1.8,
+		"width":2
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"}
+	],
+	"motions":{
+		"idle":[
+			{"file":"motions/idle3.mtn","fade_in":0,"fade_out":0},
+			{"file":"motions/idle1.mtn","fade_in":0,"fade_out":0},
+			{"file":"motions/idle2.mtn","fade_in":0,"fade_out":0}
+		]
+	}
+}
