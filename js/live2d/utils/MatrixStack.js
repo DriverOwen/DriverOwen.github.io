@@ -1,1 +1,110 @@
-function MatrixStack(){}MatrixStack.matrixStack=[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],MatrixStack.depth=0,MatrixStack.currentMatrix=[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],MatrixStack.tmp=new Array(16),MatrixStack.reset=function(){this.depth=0},MatrixStack.loadIdentity=function(){for(var t=0;t<16;t++)this.currentMatrix[t]=t%5==0?1:0},MatrixStack.push=function(){this.depth;var t=16*(this.depth+1);this.matrixStack.length<16+t&&(this.matrixStack.length=16+t);for(var r=0;r<16;r++)this.matrixStack[t+r]=this.currentMatrix[r];this.depth++},MatrixStack.pop=function(){this.depth--,this.depth<0&&(myError("Invalid matrix stack."),this.depth=0);for(var t=16*this.depth,r=0;r<16;r++)this.currentMatrix[r]=this.matrixStack[t+r]},MatrixStack.getMatrix=function(){return this.currentMatrix},MatrixStack.multMatrix=function(t){for(var r,i,a=0;a<16;a++)this.tmp[a]=0;for(a=0;a<4;a++)for(r=0;r<4;r++)for(i=0;i<4;i++)this.tmp[a+4*r]+=this.currentMatrix[a+4*i]*t[i+4*r];for(a=0;a<16;a++)this.currentMatrix[a]=this.tmp[a]};
+/**
+ *
+ *  You can modify and use this source freely
+ *  only for the development of application related Live2D.
+ *
+ *  (c) Live2D Inc. All rights reserved.
+ */
+
+function MatrixStack() {}
+
+
+MatrixStack.matrixStack = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+
+
+MatrixStack.depth = 0;
+
+
+MatrixStack.currentMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+
+
+MatrixStack.tmp = new Array(16);
+
+
+
+MatrixStack.reset = function()
+{
+    this.depth = 0;
+}
+		
+		
+
+MatrixStack.loadIdentity = function()
+{
+    for (var i = 0; i < 16; i++)
+    {
+        this.currentMatrix[i] = (i % 5 == 0) ? 1 : 0;
+    }
+}
+		
+		
+
+MatrixStack.push = function()
+{    
+    var offset = this.depth * 16;
+    var nextOffset = (this.depth + 1) * 16;
+    
+    if (this.matrixStack.length < nextOffset + 16)
+    {
+        this.matrixStack.length = nextOffset + 16;
+    }
+
+    for (var i = 0; i < 16; i++)
+    {
+        this.matrixStack[nextOffset + i] = this.currentMatrix[i];
+    }
+
+    this.depth++;
+}
+		
+		
+
+MatrixStack.pop = function()
+{
+    this.depth--;
+    if (this.depth < 0)
+    {
+        myError("Invalid matrix stack.");
+        this.depth = 0;
+    }
+
+    var offset = this.depth * 16;
+    for (var i = 0; i < 16; i++)
+    {
+        this.currentMatrix[i] = this.matrixStack[offset + i];
+    }
+}
+		
+		
+
+MatrixStack.getMatrix = function()
+{
+    return this.currentMatrix;
+}
+		
+		
+
+MatrixStack.multMatrix = function(matNew)
+{
+    var i, j, k;
+
+    for (i = 0; i < 16; i++)
+    {
+        this.tmp[i] = 0;
+    }
+
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            for (k = 0; k < 4; k++)
+            {
+                this.tmp[i + j * 4] += this.currentMatrix[i + k * 4] * matNew[k + j * 4];
+            }
+        }
+    }
+    for (i = 0; i < 16; i++)
+    {
+        this.currentMatrix[i] = this.tmp[i];
+    }
+}

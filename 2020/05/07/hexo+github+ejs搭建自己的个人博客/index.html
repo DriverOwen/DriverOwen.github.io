@@ -194,79 +194,76 @@
       </div>
     </div>
   </div>
-    
-<!-- main -->
     <div class="col-md-9 x-side-content">
-      
-        
-           
-        <div class="list-article list-article-direction-left">
-        
-          <div class="article-img">
-            <div class="limit-img">
-              <div class="article-img-top" style="background-image: url(/images/cover.jpg);"></div>
-              
-            </div>
-          </div>
-         <div class="article-body">
-            <div class="article-title-header">
-              <p class="article-title x-no"> hexo+github+ejs搭建自己的个人博客</p>
-              <div class="article-category">
-                <p class="article-category-list x-no">#html</p>
-                <p class="article-category-list x-no">#Django</p>
-                <p class="article-category-list x-no">#css3</p>
-              </div>
-            </div>
-            <div class="article-content">
-              <p class="article-text x-no"> Xowen.cn是什么?一个菜鸟的个人博客，用来发布一些学习感悟和技术文章
-Xowen.cn有哪些功能？
-方便的博客发布功能
-使用nodejs+express+mysql搭建的一个轻量级个人博客
-具有后台管理功能，支持动态查询博客
-支持ma ...</p>
-            </div>
-            <div class="article-stats">
-              <div class="article-user">
-                <img class="article-user-img" src="/images/user.jpg" alt="">
-                <p class="article-user-title x-no">Xowen</p>
-              </div>
-              <div class="article-info">
-                <p class="article-stats-list x-no"><i class="iconfont icon-read"></i><a href="2020/05/07/hexo+github+ejs搭建自己的个人博客/" style="text-decoration: none;color:#737088;">阅读全文</a></p>
-                <p class="article-stats-list x-no"><i class="iconfont icon-comment"></i>9999</p>
-                <p class="article-stats-list x-no"><i class="iconfont icon-view"></i>9999</p>
-                <p class="article-stats-list x-no"><i class="iconfont icon-time1"></i>1月前</p>
-              </div>  
-            </div>
-          </div>
+    <div class="x-blog-info">
+        <div class="x-blog-text">
+            <p class="x-no x-blog-title">hexo+github+ejs搭建自己的个人博客 
+            </p>
         </div>
-        
-        <div class="container x-navigation" style="margin-top: 10px;">
-          <nav aria-label="Page navigation">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">4</a></li>
-              <li class="page-item"><a class="page-link" href="#">5</a></li>
-              <li class="page-item"><a class="page-link" href="#">6</a></li>
-              <li class="page-item"><a class="page-link" href="#">...</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <div class="x-blog-meta">
+            <div class="x-blog-date">
+                <i class="iconfont icon-time1"></i>
+                <span>2020-05-07 16:14:40 </span>
+            </div>
+            <div class="x-blog-views">
+                <i class="iconfont icon-view"></i>
+                <span>9999</span>
+            </div>
+            <div class="x-blog-comments">
+                <i class="iconfont icon-comment"></i>
+                <span>9999</span>
+            </div>
         </div>
-      </div>
     </div>
+    <div class="container x-blog-content">
+        <h2 id="Xowen-cn是什么"><a href="#Xowen-cn是什么" class="headerlink" title="Xowen.cn是什么?"></a>Xowen.cn是什么?</h2><p>一个菜鸟的个人博客，用来发布一些学习感悟和技术文章</p>
+<h2 id="Xowen-cn有哪些功能？"><a href="#Xowen-cn有哪些功能？" class="headerlink" title="Xowen.cn有哪些功能？"></a>Xowen.cn有哪些功能？</h2><ul>
+<li>方便的<code>博客发布</code>功能<ul>
+<li>使用<code>nodejs</code>+<code>express</code>+<code>mysql</code>搭建的一个轻量级个人博客</li>
+<li>具有后台管理功能，支持动态查询博客</li>
+<li>支持<code>markdown</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs Javascript"><span class="hljs-keyword">let</span> func=<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>&#123;<br>  <span class="hljs-built_in">console</span>.log(Hello world);<br>&#125;<br><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);<br><span class="hljs-keyword">var</span> router = express.Router();<br><span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);<br><span class="hljs-comment">/*添加 markdown 模块 */</span><br><span class="hljs-keyword">const</span> MarkdownIt = <span class="hljs-built_in">require</span>(<span class="hljs-string">'markdown-it'</span>)<br><span class="hljs-keyword">const</span> hljs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'highlight.js'</span>)<br><br><span class="hljs-comment">/* GET home page. */</span><br>router.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res, next</span>) </span>&#123;<br>  res.render(<span class="hljs-string">'index'</span>, &#123;<br>    title: <span class="hljs-string">'Express'</span><br>  &#125;);<br>&#125;);<br>router.get(<span class="hljs-string">'/blog'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res, next</span>) </span>&#123;<br>  res.render(<span class="hljs-string">'index'</span>, &#123;<br>    title: <span class="hljs-string">'Express'</span><br>  &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h3 id="博客分层为"><a href="#博客分层为" class="headerlink" title="博客分层为:"></a>博客分层为:</h3><ul>
+<li><code>首页模块</code></li>
+<li><code>博客内容模块</code></li>
+<li><code>留言板模块</code></li>
+<li><code>后台管理模块</code><ul>
+<li><code>博客发布模板</code></li>
+<li><code>博客修改模块</code></li>
+<li><code>博客查询模块</code></li>
+<li><code>博客删除模块</code></li>
+<li><code>后台统计模块</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/cover2.jpg" alt="mahua"></p>
+<h2 id="采用技术"><a href="#采用技术" class="headerlink" title="采用技术"></a>采用技术</h2><ol>
+<li>nodejs</li>
+<li>express框架</li>
+<li>ejs模板</li>
+<li>markdown语法</li>
+<li>bootstrap4框架<h2 id="有问题反馈"><a href="#有问题反馈" class="headerlink" title="有问题反馈"></a>有问题反馈</h2>有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</li>
+</ol>
+<ul>
+<li>邮件: <a href="mailto:chinaloveowen@gmail.com">chinaloveowen@gmail.com</a></li>
+<li>微信: <code>oweni</code></li>
+<li>weibo: <a href="http://weibo.com/ihubo" target="_blank" rel="noopener">@Xowen</a></li>
+<li>twitter: <a href="http://twitter.com/ihubo" target="_blank" rel="noopener">@Xowen</a></li>
+</ul>
+<h2 id="请Xowen喝一杯奶茶"><a href="#请Xowen喝一杯奶茶" class="headerlink" title="请Xowen喝一杯奶茶"></a>请Xowen喝一杯奶茶</h2><p>在兴趣的驱动下,写一个<code>个人博客</code>模板，有欣喜，也还有汗水，希望将它做出一个成熟的模板，也希望大家支持。</p>
+<h2 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h2><p>Xowen 四川农业大须在读学生 性别男 爱好女</p>
+<p>Edit By <a href="http://Xowen.cn" target="_blank" rel="noopener">Xowen</a></p>
+
+    </div>
+    <div class="x-blog-footer">
+        
+    </div>
+</div>
+
 
       </div>
     </div>
