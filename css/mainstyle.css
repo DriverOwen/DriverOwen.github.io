@@ -480,6 +480,7 @@ blockquote{
   display: block;
   padding-left: 0;
     margin-bottom: 0;
+    padding: 5px;
 }
 .list-groups>a:nth-child(2n+1){
   background: #adafca;
@@ -498,7 +499,7 @@ blockquote{
   border-radius: 2px;
   font-size: 0.8rem;
   cursor: pointer;
-  
+ 
   transition: background 0.5s
 }
 .x-side-content-min{
@@ -717,7 +718,9 @@ blockquote{
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  
+  .article-stats-list{
+    justify-content: center;
+  }
   .x-stats-title::after{
     content: "";
     width: 1px;
