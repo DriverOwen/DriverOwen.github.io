@@ -746,7 +746,7 @@ input[type="checkbox"], input[type="radio"] {
 
   border: 2px solid #555;
   height: 26px;
-  min-width: 62px;
+  min-width: 63px;
 }
 
 .checkbox label::after {
@@ -788,10 +788,7 @@ input[type="checkbox"], input[type="radio"] {
     }
  
 }
-#music{
-  width: auto;
-  height:450px;
-}
+
 @media (max-width: 768px) {
    .x-num-info {
 
