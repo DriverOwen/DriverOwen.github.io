@@ -440,7 +440,8 @@ blockquote{
   position: fixed;
   min-width: 400px;
   left:0px;
-  bottom: 0px;
+  bottom: 10px;
+  margin-left: 10px;
   border-radius: 10px;
 }
 #glcanvas {
@@ -745,7 +746,7 @@ input[type="checkbox"], input[type="radio"] {
 
   border: 2px solid #555;
   height: 26px;
-  min-width: 60px;
+  min-width: 62px;
 }
 
 .checkbox label::after {
