@@ -36,4 +36,34 @@
       verify: 'true',
       visitor: 'true',
     });
-</script></section></div></div></div></div><script src=https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/highlight.min.js></script><script>hljs.initHighlightingOnLoad();</script><div class=live2d-box><canvas id=glcanvas width=300 height=350></canvas><div class=live2d-msg><p class=live2d-info-text>君子阳阳，左执簧，右招我由房，其乐只且！ 君子陶陶，左执翿，右招我由敖，其乐只且！</p></div><div class=spinner><div class=rect1></div><div class=rect2></div><div class=rect3></div><div class=rect4></div><div class=rect5></div></div></div><script src=/js/live2d/lib/live2d.min.js></script><script src=/js/live2d/framework/Live2DFramework.js></script><script src=/js/live2d/utils/MatrixStack.js></script><script src=/js/live2d/utils/ModelSettingJson.js></script><script src=/js/live2d/PlatformManager.js></script><script src=/js/live2d/LAppDefine.js></script><script src=/js/live2d/LAppModel.js></script><script src=/js/live2d/LAppLive2DManager.js></script><script src=/js/live2d/SampleApp1.js></script><script>sampleApp1();</script><script src=/js/running.js></script><div class=tools-search data-toggle=modal data-target=#myModal><i class="iconfont x-no icon-search"></i></div><div class="modal fade" id=myModal><div class="modal-dialog modal-dialog-centered"><div class=modal-content><div class=modal-header><h4 class=modal-title>请输入你想搜索的内容:</h4><button type=button class=close data-dismiss=modal>&times;</button></div><div class=modal-body><input type=text name=searchKeyword id=searchInput placeholder=请输入文章关键字或者标题></div><div class=modal-footer><a><button type=button class="btn btn-secondary">搜索</button></a> <button type=button class="btn btn-secondary" data-dismiss=modal>关闭</button></div></div></div></div><div class=fixed-back><i class="iconfont x-no icon-upa"></i></div><a href="/"><div class=fixed-home><i class="iconfont x-no icon-xuanzhongshangcheng"></i></div></a><div class="container-fluid x-footer"><p class="web-info x-no">Copyright © 2020 Xowen [www.xowen.cn] All Rights Reserved</p><p class="web-info x-no">Power By<span>&nbsp;Xowen</span></p></div></body></html>
+</script></section></div></div></div></div><script src=https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/highlight.min.js></script><script>hljs.initHighlightingOnLoad();</script><div class=live2d-box><canvas id=glcanvas width=300 height=350></canvas><div class=live2d-msg><p class=live2d-info-text>君子阳阳，左执簧，右招我由房，其乐只且！ 君子陶陶，左执翿，右招我由敖，其乐只且！</p></div><div class=spinner><div class=rect1></div><div class=rect2></div><div class=rect3></div><div class=rect4></div><div class=rect5></div></div></div><script src=/js/live2d/lib/live2d.min.js></script><script src=/js/live2d/framework/Live2DFramework.js></script><script src=/js/live2d/utils/MatrixStack.js></script><script src=/js/live2d/utils/ModelSettingJson.js></script><script src=/js/live2d/PlatformManager.js></script><script src=/js/live2d/LAppDefine.js></script><script src=/js/live2d/LAppModel.js></script><script src=/js/live2d/LAppLive2DManager.js></script><script src=/js/live2d/SampleApp1.js></script><script>sampleApp1();</script><script src=/js/running.js></script><div class=tools-search data-toggle=modal data-target=#myModal><i class="iconfont x-no icon-search"></i></div><div class="modal fade" id=myModal><div class="modal-dialog modal-dialog-centered"><div class=modal-content><div class=modal-header><h4 class=modal-title>请输入你想搜索的内容:</h4><button type=button class=close data-dismiss=modal>&times;</button></div><div class=modal-body><input type=text name=searchKeyword id=searchInput placeholder=请输入文章关键字或者标题></div><div class=modal-footer><a><button type=button class="btn btn-secondary">搜索</button></a> <button type=button class="btn btn-secondary" data-dismiss=modal>关闭</button></div></div></div></div><div class=fixed-back><i class="iconfont x-no icon-upa"></i></div><a href="/"><div class=fixed-home><i class="iconfont x-no icon-xuanzhongshangcheng"></i></div></a><div class="container-fluid x-footer"><p class="web-info x-no">Copyright © 2020 Xowen [www.xowen.cn] All Rights Reserved</p><p class="web-info x-no">Power By<span>&nbsp;Xowen</span></p></div><script type=text/javascript>
+    /* 鼠标特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("富强","民主","文明","和谐","自由","平等","公正","法治","爱国","敬业","诚信","友善");
+            var $i = $("<span></span>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")",
+                "font-size": "0.8rem"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
+    });
+    </script></body></html>
