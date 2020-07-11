@@ -1,4 +1,63 @@
-<!DOCTYPE html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=renderer content=webkit><meta http-equiv=Cache-Control content=no-transform><meta http-equiv=Cache-Control content=no-siteapp><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=format-detection content="telephone=no,email=no,adress=no"><meta name=theme-color content=#000000><meta http-equiv=window-target content=_top><title>Deno会在短期内取代Node吗？[转载] | Xowen Blog</title><meta name=description content="Deno是什么？Deno v1.0.0已于5月13日正式发布。 其开发者为Ryan Dahl，他的上一个项目是Node，相信我们大部分人都了解。 作为Node之父，Ryan Dahl认为Node自从他把项目移交出去后，Node的走向越来越背离了他的初衷，并且存在着很多无法解决的问题，所以他决心重新开发一个新的项目去解决这些问题，这个项目就名为Deno。目标则是Destroy-node。 那么，这样"><meta property=og:type content=article><meta property=og:title content=Deno会在短期内取代Node吗？[转载]><meta property=og:url content=https://xowen.cn/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/index.html><meta property=og:site_name content=xowen><meta property=og:description content="Deno是什么？Deno v1.0.0已于5月13日正式发布。 其开发者为Ryan Dahl，他的上一个项目是Node，相信我们大部分人都了解。 作为Node之父，Ryan Dahl认为Node自从他把项目移交出去后，Node的走向越来越背离了他的初衷，并且存在着很多无法解决的问题，所以他决心重新开发一个新的项目去解决这些问题，这个项目就名为Deno。目标则是Destroy-node。 那么，这样"><meta property=og:locale content=zh_CN><meta property=og:image content=https://s1.ax1x.com/2020/05/24/tS4Evt.png><meta property=article:published_time content=2020-05-24T13:16:18.000Z><meta property=article:modified_time content=2020-05-24T13:25:09.248Z><meta property=article:author content="John Doe"><meta property=article:tag content=转载><meta property=article:tag content=node><meta property=article:tag content=deno><meta name=twitter:card content=summary><meta name=twitter:image content=https://s1.ax1x.com/2020/05/24/tS4Evt.png><link rel=canonical href=https://xowen.cn/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/index.html><link rel=stylesheet href=/css/bootstrap.css><script src=https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js></script><script src=https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js></script><script src=https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js></script><link rel=stylesheet href=/css/mainstyle.css><link href=https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/styles/atom-one-dark-reasonable.min.css rel=stylesheet><link rel="shortcut icon" href=/images/fav.ico type=image/x-icon><link rel=stylesheet href=//at.alicdn.com/t/font_1798605_iwfejqu5mz.css><script type=module src=https://cdn.bootcdn.net/ajax/libs/instant.page/3.0.0/instantpage.min.js></script><script>
+<!DOCTYPE html>
+<html  lang=zh>
+
+
+  <head>
+    <meta charset="utf-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#000000" />
+    <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+    <meta http-equiv="window-target" content="_top" />
+  
+    
+    <title>Deno会在短期内取代Node吗？[转载] | Xowen Blog</title>
+    <meta name="description" content="Deno是什么？Deno v1.0.0已于5月13日正式发布。 其开发者为Ryan Dahl，他的上一个项目是Node，相信我们大部分人都了解。 作为Node之父，Ryan Dahl认为Node自从他把项目移交出去后，Node的走向越来越背离了他的初衷，并且存在着很多无法解决的问题，所以他决心重新开发一个新的项目去解决这些问题，这个项目就名为Deno。目标则是Destroy-node。 那么，这样">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deno会在短期内取代Node吗？[转载]">
+<meta property="og:url" content="https://xowen.cn/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/index.html">
+<meta property="og:site_name" content="xowen">
+<meta property="og:description" content="Deno是什么？Deno v1.0.0已于5月13日正式发布。 其开发者为Ryan Dahl，他的上一个项目是Node，相信我们大部分人都了解。 作为Node之父，Ryan Dahl认为Node自从他把项目移交出去后，Node的走向越来越背离了他的初衷，并且存在着很多无法解决的问题，所以他决心重新开发一个新的项目去解决这些问题，这个项目就名为Deno。目标则是Destroy-node。 那么，这样">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/tS4Evt.png">
+<meta property="article:published_time" content="2020-05-24T13:16:18.000Z">
+<meta property="article:modified_time" content="2020-05-24T13:25:09.248Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="转载">
+<meta property="article:tag" content="node">
+<meta property="article:tag" content="deno">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/24/tS4Evt.png">
+    <!-- Canonical links -->
+    <link rel="canonical" href="https://xowen.cn/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/index.html">
+   
+    
+<link rel="stylesheet" href="/css/bootstrap.css">
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    
+<link rel="stylesheet" href="/css/mainstyle.css">
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/styles/atom-one-dark-reasonable.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1798605_iwfejqu5mz.css">
+    <script type="module" src="https://cdn.bootcdn.net/ajax/libs/instant.page/3.0.0/instantpage.min.js"></script>
+    
+    <script>
       (function(){
           var bp = document.createElement('script');
           var curProtocol = window.location.protocol.split(':')[0];
@@ -11,7 +70,108 @@
           var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(bp, s);
       })();
-      </script><meta name=generator content="Hexo 4.2.0"></head><body><div class=container-fluid style="border-bottom: 1px solid #c6c8ca;"><div class=container><nav class="navbar navbar-expand-lg navbar-light"><button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button> <a class=navbar-brand href="/">Xowen</a><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class="nav-item active"><a class=nav-link href="/">首页<span class=sr-only>(current)</span></a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>分类</a><div class=dropdown-menu aria-labelledby=navbarDropdown><ul class=category-list><li class=category-list-item><a class=category-list-link href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class=category-list-count>11</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class=category-list-count>3</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class=category-list-count>2</span></li></ul></div></li><li class=nav-item><a class=nav-link href=/archives>Xowen's 归档</a></li><li class=nav-item><a class=nav-link href=/message>留言板</a></li><li class=nav-item><a class=nav-link href=/about>关于Xowen</a></li></ul><ul class="nav justify-content-end right-links"><li class=nav-item><i class="iconfont icon-QQ"></i> <a class=nav-user href="tencent://QQInterLive/?Cmd=2&Uin=1941352853" target=_blank>QQ</a></li><li class=nav-item><i class="iconfont icon-git"></i> <a class=nav-user href=https://github.com/DriverOwen/DriverOwen.github.io target=_blank>GitHub</a></li><li class=nav-item><div class=checkbox><input type=checkbox data-toggle=tooltip data-placement=right title=打开看板娘! id=live2dButton> <label></label></div></li></ul></div><a class=navbar-brand href=#></a></nav></div></div><div class="container x-padding cover-container"><div class=xowen-cover style="background: url(https://s1.ax1x.com/2020/06/04/tBBz5j.jpg) center center / cover no-repeat;"></div><div class="row x-top-info"><div class=col-md-7><div class=xowen-info><div class=xowen-user><a class=top-avatar href=javascript:;><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg alt=Xowen></a><div class=xowen-texts><p class="top-title x-no"><a href=javascript:;>The only hope in the village</a></p><p class="top-text x-no"><a target=_blank href=https://xowen.cn>村里唯一的希望</a></p></div></div></div></div><div class=col-md-5><div class=x-num-info><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><div class=x-stats id=busuanzi_container_site_pv><p class="x-stats-title x-no" id=busuanzi_value_site_pv>loading...</p><p class="x-stats-text x-no">VISITS</p></div><div class=x-stats><p class="x-stats-title x-no" id=SURVIVA>loadings...</p><p class="x-stats-text x-no">SURVIVA</p><script>
+      </script>
+      
+  <meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+      <!-- header -->
+  <div class="container-fluid" style=" border-bottom: 1px solid #c6c8ca;">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">Xowen</a>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">首页<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                分类
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class="category-list-count">2</span></li></ul>
+                <!-- <div class="dropdown-divider"></div> -->
+                <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+              </div>
+            </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/archives">Xowen's 归档</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/message">留言板</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/about">关于Xowen</a>
+              </li>
+            
+          
+          </ul>
+          <ul class="nav justify-content-end right-links">
+            
+              <li class="nav-item">
+                <i class="iconfont icon-QQ"></i>
+                <a class="nav-user" href="tencent://QQInterLive/?Cmd=2&Uin=1941352853" target="_blank">QQ</a>
+              </li>
+            
+              <li class="nav-item">
+                <i class="iconfont icon-git"></i>
+                <a class="nav-user" href="https://github.com/DriverOwen/DriverOwen.github.io" target="_blank">GitHub</a>
+              </li>
+            
+            <li class="nav-item" >
+             
+              <div class="checkbox">
+                <input type="checkbox" data-toggle="tooltip" data-placement="right" title="打开看板娘!"  id="live2dButton">
+                <label></label>
+              </div>
+              
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand" href="#"></a>
+      </nav>
+    </div>
+  </div>
+  <div class="container x-padding cover-container">
+    <div class="xowen-cover" style="background: url(https://s1.ax1x.com/2020/06/04/tBBz5j.jpg) center center / cover no-repeat;">
+
+    </div>
+    <div class="row x-top-info">
+      <div class="col-md-7">
+        <div class="xowen-info">
+          <div class="xowen-user">
+            <a class="top-avatar" href="javascript:;"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="Xowen"></a>
+            <div class="xowen-texts">
+              <p class="top-title x-no"><a href="javascript:;">The only hope in the village</a></p>
+              <p class="top-text x-no"><a target="_blank" href="https://xowen.cn">村里唯一的希望</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="x-num-info">
+          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+          <div class="x-stats" id="busuanzi_container_site_pv">
+            <p class="x-stats-title x-no" id="busuanzi_value_site_pv">loading...</p>
+            <p class="x-stats-text x-no " id="">VISITS</p>
+          </div>
+          <div class="x-stats">
+            <p class="x-stats-title x-no" id="SURVIVA">loadings...</p>
+            <p class="x-stats-text x-no">SURVIVA</p>
+            <script>
               var now = new Date();
               (function createtime() {
                   var grt= new Date("5/10/2020 13:14:21");
@@ -21,10 +181,234 @@
                   document.getElementById("SURVIVA").innerHTML = dnum+" Days";
               })()
         
-          </script></div><div class=x-stats><p class="x-stats-title x-no">20</p><p class="x-stats-text x-no">POSTS</p></div><div class=x-stats><p class="x-stats-title x-no">14k</p><p class="x-stats-text x-no">WORDS</p></div></div></div></div><nav aria-label=breadcrumb><ol class=breadcrumb>首页 / 2020 / 05 / 24 / 生活日志 / Deno会在短期内取代Node吗？-转载 /</ol></nav></div><div class=container><div class=row><div class="col-md-3 x-side-box"><div class=card style="width: auto;"><img class=card-img-top src=https://s1.ax1x.com/2020/05/10/Y1WAjU.jpg alt="Card image cap"><div class=card-body><h5 class=card-title>公告</h5><p class=card-text style="text-align: justify;">大家好，我是xowen，欢迎访问我的博客。本博客采用hexo+github+bootstrap4+ejs制作。本博客主要用来记录我的一些学习过程和一些技术分享。</p></div></div><div class=card style="width: auto;"><div class=card-body><h5 class=card-title>分类</h5><ul class=category-list><li class=category-list-item><a class=category-list-link href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class=category-list-count>11</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class=category-list-count>3</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class=category-list-count>2</span></li></ul></div></div><div class=card style="width: auto;"><div class=card-body><h5 class=card-title>最新文章</h5><ul class="list-group list-group-flush"><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/30/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Css-grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E5%AD%A6%E4%B9%A0-1/">Css grid网格布局学习(1)...</a><p class="hot-article-stats x-no">共 1.5k 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/">Deno会在短期内取代Node吗？[转载]...</a><p class="hot-article-stats x-no">共 1.6k 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0-%E9%87%8D%E6%96%B0%E5%8A%A0%E5%9B%9E%E7%9C%8B%E6%9D%BF%E5%A8%98/">博客更新-重新加回看板娘...</a><p class="hot-article-stats x-no">共 997 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/17/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-2/">学习日记--git(2)...</a><p class="hot-article-stats x-no">共 1.7k 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/">学习日记--git(1)...</a><p class="hot-article-stats x-no">共 1.3k 字</p></div></li></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"><div class=card-body><h5 class=card-title>标签云</h5><ul class="list-groups list-group-flush"><a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css3/" style="font-size: 12px;">css3</a> <a href="/tags/deno/" style="font-size: 10px;">deno</a> <a href="/tags/django/" style="font-size: 16px;">django</a> <a href="/tags/ejs/" style="font-size: 20px;">ejs</a> <a href="/tags/git/" style="font-size: 12px;">git</a> <a href="/tags/github/" style="font-size: 12px;">github</a> <a href="/tags/grid/" style="font-size: 10px;">grid</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/js%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">js插件</a> <a href="/tags/live2d/" style="font-size: 10px;">live2d</a> <a href="/tags/nexo/" style="font-size: 18px;">nexo</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/opp/" style="font-size: 10px;">opp</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 10px;">优化</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 12px;">学习</a> <a href="/tags/%E5%B8%83%E5%B1%80/" style="font-size: 10px;">布局</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"><div class=card-body><h5 class=card-title>归档</h5><ul class=archive-list><li class=archive-list-item><a class=archive-list-link href="/archives/2020/05/">2020-05</a><span class=archive-list-count>20</span></li></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"><div class=card-body><h5 class=card-title>最新说说</h5><ul class="list-group list-group-flush"><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"></div></div><div class="col-md-9 x-side-content"><div class=x-blog-info><div class=x-blog-text><p class="x-no x-blog-title">Deno会在短期内取代Node吗？[转载]</p></div><div class=x-blog-meta><div class=x-blog-date><i class="iconfont icon-time1"></i> <span>2020-05-24 21:16:18</span></div><div class=x-blog-views><i class="iconfont icon-jianpan"></i> <span>字数: 1.6k</span></div><div id="/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/" data-flag-title=Deno会在短期内取代Node吗？[转载] class="x-blog-comments leancloud-visitors"><i class="iconfont icon-view"></i> <span class=leancloud-visitors-count>loading...</span> <span>&nbsp;访问量</span></div></div></div><div class="container x-blog-content"><h2 id=Deno是什么？><a href=#Deno是什么？ class=headerlink title=Deno是什么？></a>Deno是什么？</h2><p>Deno v1.0.0已于5月13日正式发布。</p><p>其开发者为Ryan Dahl，他的上一个项目是Node，相信我们大部分人都了解。</p><p>作为Node之父，Ryan Dahl认为Node自从他把项目移交出去后，Node的走向越来越背离了他的初衷，并且存在着很多无法解决的问题，所以他决心重新开发一个新的项目去解决这些问题，这个项目就名为Deno。目标则是Destroy-node。</p><p>那么，这样是不是就意味着Deno即将替代Node，成为Node的下一代产品？我们应不应该从现在就开始放弃Node开始使用Deno呢？ 让我们一起看看。</p><h2 id=起源><a href=#起源 class=headerlink title=起源></a>起源</h2><p>在2018年，Ryan在柏林进行了一次演讲，这是他第二次关于JS的公开演讲，第一次再2009，那次是宣布Node项目的诞生。</p><p>在这次演讲中，除了主要介绍他认为Node.js的几大问题和不可避免的许多Bug外，在演讲快结束时，他揭开了当时还是个小项目名为Deno的面纱，因为和node命名有着千丝万缕的联系，那时大家认为这个项目就是Node.js v2，它将会解决和完善ry提到那些问题。</p><p>两年后的5月13日， Deno 1.0终于正式发布了，它是一个全新的服务端JavaScript运行时，使用Rust而不是C++开发，由于Rust原生支持WebAssembly，所以它也能直接运行WebAssembly。基于Tokio平台(它提供了所有JavaScript所需的异步操作)，内置V8和tsc引擎，可直接解释JavaScript和TypeScript。</p><h2 id=安全集成><a href=#安全集成 class=headerlink title=安全集成></a>安全集成</h2><p>默认情况下，Node.js给你的访问权限比较高，这意味着你拥有读写文件系统、对外发出请求、访问环境变量等行为。虽然作为开发人员，拥有这种级别的访问权限对开发过程非常好，但如果你在开发过程中有一点疏漏，将来对你的应用也会产生安全风险。</p><p>而在Deno这，默认情况下脚本不具有读写权限，必须显式通过命令行参数来启用或禁用对不同安全功能的访问。因此，如果需要脚本能够访问/etc文件夹，可以通过下面命令行执行：</p><p>deno –allow-read = / etc myscript.ts<br>这就类似于其他平台处理安全性的方式。如果你是Android用户，那么肯定有很多应用程序要求你允许它们访问你手机内的不同资源，例如联系人、电话、文件夹等，同样的概念也可以在这里应用。通过将这些标志用作执行脚本的命令行的一部分，你可以提供代码所需的权限。</p><h2 id=更完整的标准库><a href=#更完整的标准库 class=headerlink title=更完整的标准库></a>更完整的标准库</h2><p>自从Node的第一个版本发布以来，JavaScript已经改进了它的标准库，但与其他语言相比，它仍有相当长的路要走。Deno也试图改进这一点，它声称拥有一个非常完整的标准库，允许开发人员使用官方工具执行基本任务，而只需要对复杂任务使用外部库(ala NPM)。</p><p>本质上，Deno开箱即用工具为终端文本添加颜色，处理外部数据结构(如Binary、CSV、YAML和其他)，生成UUID，甚至编写WebSocket。还可以使用其他更基本的模块，例如文件系统访问、日期助手函数、http相关函数等等。</p><h2 id=集成TypeScript><a href=#集成TypeScript class=headerlink title=集成TypeScript></a>集成TypeScript</h2><p>如果你对TypeScript非常熟悉，那么使用Deno将会更加容易上手，因为它原生可以直接运行TS。</p><p>另外，Deno不需要任何外部工具去支持多语言，它内部会根据文件后缀自动判断其使用的语言解释引擎。</p><p>虽然默认情况下Deno会处理很多事情，但您可以使用自己的tsconfig.json文件覆盖配置：</p><figure class="highlight js"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs js">deno run -c tsconfig.json [your-script.ts]<br></code></pre></td></tr></table></figure><p>默认配置使用的是严格模式，因此如果发现任何不合格的代码都会立即得到提示。</p><h2 id=放弃NPM和node-modules><a href=#放弃NPM和node-modules class=headerlink title=放弃NPM和node_modules></a>放弃NPM和node_modules</h2><p>Deno决定完全放弃NPM和node_modules， 因为npm逻辑越来越复杂，node.js对外部模块几乎没有任何安全验证措施，另外node_modules也越来越臃肿且难以管理。<br><img src=https://s1.ax1x.com/2020/05/24/tS4Evt.png></p><p>那么，Deno是如何处理依赖关系呢？它是通过url加载所有模块的：</p><figure class="highlight js"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs js"><span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> log <span class=hljs-keyword>from</span> <span class=hljs-string>"https://deno.land/std/log/mod.ts"</span>;<br></code></pre></td></tr></table></figure><p>所以，Deno不再需要拥有一个集中的存储库，之前的package.json也不再需要了，现在通过在名为deps.ts的文件中包含了模块列表及其各自的URL，简化了依赖管理。但版本管理控制怎么办呢？作者已经想到了，可在URL上指定包的版本，deps.ts的文件示意：</p><figure class="highlight js"><table><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br></pre></td><td class=code><pre><code class="hljs js"><span class=hljs-keyword>export</span> &#123; assert &#125; <span class=hljs-keyword>from</span> <span class=hljs-string>"https://deno.land/std@v0.39.0/testing/asserts.ts"</span>;<br><span class=hljs-keyword>export</span> &#123; green, bold &#125; <span class=hljs-keyword>from</span> <span class=hljs-string>"https://deno.land/std@v0.39.0/fmt/colors.ts"</span>;<br></code></pre></td></tr></table></figure><p>由于这个文件的存在，在内部运行时，依赖项将被重新导出，这就能让应用程序的不同模块都引用相同的源。</p><p>如果您想更新任何模块的版本，可以通过修改deps.ts中URL的版本信息。另外，虽然没有了node_modeules目录，但依赖项仍然会下载并隐藏在你的硬盘中，供你离线使用，如通过需要重新下载，只需在命令中添加—reload命令即可。</p><h2 id=还有什么？><a href=#还有什么？ class=headerlink title=还有什么？></a>还有什么？</h2><p>Deno还包括其他特性，比如自动测试器、调试器、文件监视器等开箱即用的工具。但其中一些只是语言提供的API，您需要编写自己的工具才能使用它们。</p><p>以Deno.watchFS向您提供的文件监视器API为例，如果你正在寻找类似于nodemon的解决方案，那么你可以自己构建它。下面是一个解决类似问题的23行脚本：</p><p><img src=https://img.usuuu.com/20200522/1I3OZGHp.png></p><p>最后，它会在短期内取代Node.js吗？</p><p>虽然Deno的很多想法和理念非常好，也确实解决了很多问题。但作为一个从Node发布之初就开始用的团队，我认为PHP、Python甚至Ruby(更不用说Java或.NET)都不能与在后端拥有JavaScript和异步I/O模型相提并论。这些年来，Node(和JavaScript)不断发展，以满足业界的需求。</p><p><a href=https://www.usuuu.com/a/I9mPbr0g target=_blank rel=noopener>转载：https://www.usuuu.com/a/I9mPbr0g</a></p></div><div class=pageLocate><div class=col-md-6><p><a href="/2020/05/30/学习日记/Css-grid网格布局学习-1/">上一章:&nbsp;<span>学习日记/Css...</span></a></p></div><div class=col-md-6><p style="text-align: right;"><a href="/2020/05/23/博客搭建/博客更新-重新加回看板娘/">下一章:&nbsp;<span>博客搭建/博客更...</span></a></p></div></div><div class=x-blog-footer><section id=comments class=comments><style>
+          </script>
+          </div>
+          <div class="x-stats">
+            
+            <p class="x-stats-title x-no">21</p>
+            <p class="x-stats-text x-no">POSTS</p>
+          </div>
+          <div class="x-stats">
+            <p class="x-stats-title x-no">14.9k</p>
+            <p class="x-stats-text x-no">WORDS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+     
+       首页 / 2020 / 05 / 24 / 生活日志 / Deno会在短期内取代Node吗？-转载 / 
+     
+      </ol>
+    </nav>
+  </div>
+ 
+    <div class="container">
+      <div class="row">
+    <div class="col-md-3 x-side-box">
+    <div class="card" style="width: auto;">
+      <img class="card-img-top" src="https://s1.ax1x.com/2020/05/10/Y1WAjU.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">公告</h5>
+        <p class="card-text" style="text-align: justify;">大家好，我是xowen，欢迎访问我的博客。本博客采用hexo+github+bootstrap4+ejs制作。本博客主要用来记录我的一些学习过程和一些技术分享。 </p>
+      </div>
+    </div>
+
+   
+    
+      <div class="card" style="width: auto;">
+  <div class="card-body">
+    <h5 class="card-title">分类</h5>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class="category-list-count">2</span></li></ul>
+  </div>
+</div>
+    
+      <div class="card" style="width: auto;">
+  <div class="card-body">
+    <h5 class="card-title">最新文章</h5>
+    <ul class="list-group list-group-flush">
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/07/11/css3%E5%8A%A0js%E6%A8%A1%E4%BB%BFwin10%E6%97%B6%E9%97%B4%E8%BD%B4%E7%89%B9%E6%95%88/">css3加js模仿win10时间轴特效...</a>
+            <p class="hot-article-stats x-no">共 905 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/30/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Css-grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E5%AD%A6%E4%B9%A0-1/">Css grid网格布局学习(1)...</a>
+            <p class="hot-article-stats x-no">共 1.5k 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/">Deno会在短期内取代Node吗？[转载]...</a>
+            <p class="hot-article-stats x-no">共 1.6k 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0-%E9%87%8D%E6%96%B0%E5%8A%A0%E5%9B%9E%E7%9C%8B%E6%9D%BF%E5%A8%98/">博客更新-重新加回看板娘...</a>
+            <p class="hot-article-stats x-no">共 997 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/17/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-2/">学习日记--git(2)...</a>
+            <p class="hot-article-stats x-no">共 1.7k 字</p>
+          </div>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+    
+      
+  <div class="card" style="width: auto;margin-bottom: 10px;">
+    <div class="card-body">
+      <h5 class="card-title">标签云</h5>
+      <ul class="list-groups list-group-flush">
+        <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css3/" style="font-size: 14px;">css3</a> <a href="/tags/deno/" style="font-size: 10px;">deno</a> <a href="/tags/django/" style="font-size: 16px;">django</a> <a href="/tags/ejs/" style="font-size: 20px;">ejs</a> <a href="/tags/git/" style="font-size: 12px;">git</a> <a href="/tags/github/" style="font-size: 12px;">github</a> <a href="/tags/grid/" style="font-size: 10px;">grid</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/js%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">js插件</a> <a href="/tags/live2d/" style="font-size: 10px;">live2d</a> <a href="/tags/nexo/" style="font-size: 18px;">nexo</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/opp/" style="font-size: 10px;">opp</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 10px;">优化</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 12px;">学习</a> <a href="/tags/%E5%B8%83%E5%B1%80/" style="font-size: 10px;">布局</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a>
+      </ul>
+    </div>
+  </div>
+  
+    
+      
+
+<div class="card" style="width: auto;margin-bottom: 10px;">
+  <div class="card-body">
+    <h5 class="card-title">归档</h5>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">2020-07</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">2020-05</a><span class="archive-list-count">20</span></li></ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div class="card" style="width: auto;margin-bottom: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">最新说说</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="width: auto;margin-bottom: 10px;">
+     
+      
+      
+    </div>
+    
+  </div>
+    
+    
+<div class="col-md-9 x-side-content">
+    <div class="x-blog-info">
+        <div class="x-blog-text">
+            <p class="x-no x-blog-title">Deno会在短期内取代Node吗？[转载] 
+            </p>
+        </div>
+        <div class="x-blog-meta">
+            <div class="x-blog-date">
+                <i class="iconfont icon-time1"></i>
+                <span>2020-05-24 21:16:18 </span>
+            </div>
+            <div class="x-blog-views">
+                <i class="iconfont icon-jianpan"></i>
+                <span>字数: 1.6k</span>
+            </div>
+            <div id="/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/" data-flag-title="Deno会在短期内取代Node吗？[转载]" class="x-blog-comments leancloud-visitors">
+                <i class="iconfont icon-view"></i>
+               
+                <span class="leancloud-visitors-count">loading...</span> <span>&nbsp;访问量</span>
+            </div>
+          
+        </div>
+    </div>
+    <div class="container x-blog-content">
+        <h2 id="Deno是什么？"><a href="#Deno是什么？" class="headerlink" title="Deno是什么？"></a>Deno是什么？</h2><p>Deno v1.0.0已于5月13日正式发布。</p>
+<p>其开发者为Ryan Dahl，他的上一个项目是Node，相信我们大部分人都了解。</p>
+<p>作为Node之父，Ryan Dahl认为Node自从他把项目移交出去后，Node的走向越来越背离了他的初衷，并且存在着很多无法解决的问题，所以他决心重新开发一个新的项目去解决这些问题，这个项目就名为Deno。目标则是Destroy-node。</p>
+<p>那么，这样是不是就意味着Deno即将替代Node，成为Node的下一代产品？我们应不应该从现在就开始放弃Node开始使用Deno呢？ 让我们一起看看。</p>
+<h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p>在2018年，Ryan在柏林进行了一次演讲，这是他第二次关于JS的公开演讲，第一次再2009，那次是宣布Node项目的诞生。</p>
+<p>在这次演讲中，除了主要介绍他认为Node.js的几大问题和不可避免的许多Bug外，在演讲快结束时，他揭开了当时还是个小项目名为Deno的面纱，因为和node命名有着千丝万缕的联系，那时大家认为这个项目就是Node.js v2，它将会解决和完善ry提到那些问题。</p>
+<p>两年后的5月13日， Deno 1.0终于正式发布了，它是一个全新的服务端JavaScript运行时，使用Rust而不是C++开发，由于Rust原生支持WebAssembly，所以它也能直接运行WebAssembly。基于Tokio平台(它提供了所有JavaScript所需的异步操作)，内置V8和tsc引擎，可直接解释JavaScript和TypeScript。</p>
+<h2 id="安全集成"><a href="#安全集成" class="headerlink" title="安全集成"></a>安全集成</h2><p>默认情况下，Node.js给你的访问权限比较高，这意味着你拥有读写文件系统、对外发出请求、访问环境变量等行为。虽然作为开发人员，拥有这种级别的访问权限对开发过程非常好，但如果你在开发过程中有一点疏漏，将来对你的应用也会产生安全风险。</p>
+<p>而在Deno这，默认情况下脚本不具有读写权限，必须显式通过命令行参数来启用或禁用对不同安全功能的访问。因此，如果需要脚本能够访问/etc文件夹，可以通过下面命令行执行：</p>
+<p>deno –allow-read = / etc myscript.ts<br>这就类似于其他平台处理安全性的方式。如果你是Android用户，那么肯定有很多应用程序要求你允许它们访问你手机内的不同资源，例如联系人、电话、文件夹等，同样的概念也可以在这里应用。通过将这些标志用作执行脚本的命令行的一部分，你可以提供代码所需的权限。</p>
+<h2 id="更完整的标准库"><a href="#更完整的标准库" class="headerlink" title="更完整的标准库"></a>更完整的标准库</h2><p>自从Node的第一个版本发布以来，JavaScript已经改进了它的标准库，但与其他语言相比，它仍有相当长的路要走。Deno也试图改进这一点，它声称拥有一个非常完整的标准库，允许开发人员使用官方工具执行基本任务，而只需要对复杂任务使用外部库(ala NPM)。</p>
+<p>本质上，Deno开箱即用工具为终端文本添加颜色，处理外部数据结构(如Binary、CSV、YAML和其他)，生成UUID，甚至编写WebSocket。还可以使用其他更基本的模块，例如文件系统访问、日期助手函数、http相关函数等等。</p>
+<h2 id="集成TypeScript"><a href="#集成TypeScript" class="headerlink" title="集成TypeScript"></a>集成TypeScript</h2><p>如果你对TypeScript非常熟悉，那么使用Deno将会更加容易上手，因为它原生可以直接运行TS。</p>
+<p>另外，Deno不需要任何外部工具去支持多语言，它内部会根据文件后缀自动判断其使用的语言解释引擎。</p>
+<p>虽然默认情况下Deno会处理很多事情，但您可以使用自己的tsconfig.json文件覆盖配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">deno run -c tsconfig.json [your-script.ts]<br></code></pre></td></tr></table></figure>
+<p>默认配置使用的是严格模式，因此如果发现任何不合格的代码都会立即得到提示。</p>
+<h2 id="放弃NPM和node-modules"><a href="#放弃NPM和node-modules" class="headerlink" title="放弃NPM和node_modules"></a>放弃NPM和node_modules</h2><p>Deno决定完全放弃NPM和node_modules， 因为npm逻辑越来越复杂，node.js对外部模块几乎没有任何安全验证措施，另外node_modules也越来越臃肿且难以管理。<br><img src="https://s1.ax1x.com/2020/05/24/tS4Evt.png" alt=""></p>
+<p>那么，Deno是如何处理依赖关系呢？它是通过url加载所有模块的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> log <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/std/log/mod.ts"</span>;<br></code></pre></td></tr></table></figure>
+<p>所以，Deno不再需要拥有一个集中的存储库，之前的package.json也不再需要了，现在通过在名为deps.ts的文件中包含了模块列表及其各自的URL，简化了依赖管理。但版本管理控制怎么办呢？作者已经想到了，可在URL上指定包的版本，deps.ts的文件示意：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">export</span> &#123; assert &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/std@v0.39.0/testing/asserts.ts"</span>;<br><span class="hljs-keyword">export</span> &#123; green, bold &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/std@v0.39.0/fmt/colors.ts"</span>;<br></code></pre></td></tr></table></figure>
+<p>由于这个文件的存在，在内部运行时，依赖项将被重新导出，这就能让应用程序的不同模块都引用相同的源。</p>
+<p>如果您想更新任何模块的版本，可以通过修改deps.ts中URL的版本信息。另外，虽然没有了node_modeules目录，但依赖项仍然会下载并隐藏在你的硬盘中，供你离线使用，如通过需要重新下载，只需在命令中添加—reload命令即可。</p>
+<h2 id="还有什么？"><a href="#还有什么？" class="headerlink" title="还有什么？"></a>还有什么？</h2><p>Deno还包括其他特性，比如自动测试器、调试器、文件监视器等开箱即用的工具。但其中一些只是语言提供的API，您需要编写自己的工具才能使用它们。</p>
+<p>以Deno.watchFS向您提供的文件监视器API为例，如果你正在寻找类似于nodemon的解决方案，那么你可以自己构建它。下面是一个解决类似问题的23行脚本：</p>
+<p><img src="https://img.usuuu.com/20200522/1I3OZGHp.png" alt=""></p>
+<p>最后，它会在短期内取代Node.js吗？</p>
+<p>虽然Deno的很多想法和理念非常好，也确实解决了很多问题。但作为一个从Node发布之初就开始用的团队，我认为PHP、Python甚至Ruby(更不用说Java或.NET)都不能与在后端拥有JavaScript和异步I/O模型相提并论。这些年来，Node(和JavaScript)不断发展，以满足业界的需求。</p>
+<p><a href="https://www.usuuu.com/a/I9mPbr0g" target="_blank" rel="noopener">转载：https://www.usuuu.com/a/I9mPbr0g</a></p>
+
+    </div>
+    <div class="pageLocate">
+       <div class="col-md-6">
+    
+        
+            
+            <p><a href="/2020/05/30/学习日记/Css-grid网格布局学习-1/">上一章:&nbsp;<span>学习日记/Css...</span></a></p>
+           
+        
+       </div>
+       <div class="col-md-6" >
+        
+            
+            <p style="text-align: right;"><a href="/2020/05/23/博客搭建/博客更新-重新加回看板娘/">下一章:&nbsp;<span>博客搭建/博客更...</span></a></p>
+            
+        
+       </div>
+    </div>
+    <div class="x-blog-footer">
+        
+            <section id="comments" class="comments">
+              <style>
                 .comments{margin:30px;padding:10px;background:#fff}
                 @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-              </style><div class=valine_comment></div><script src=//cdn1.lncld.net/static/js/3.0.4/av-min.js></script><script src=//unpkg.com/valine/dist/Valine.min.js></script><script>
+              </style>
+              <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
   new Valine({
       el: '.valine_comment',
       app_id: 'kEVKhcTQTMzzN0RQplG6qnm1-gzGzoHsz',
@@ -34,7 +418,150 @@
       verify: 'true',
       visitor: 'true',
     });
-</script></section></div></div></div></div><script src=https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/highlight.min.js></script><script>hljs.initHighlightingOnLoad();</script><div class=live2d-box><canvas id=glcanvas width=300 height=350></canvas><div class=live2d-msg><p class=live2d-info-text>君子阳阳，左执簧，右招我由房，其乐只且！ 君子陶陶，左执翿，右招我由敖，其乐只且！</p></div><div class=spinner><div class=rect1></div><div class=rect2></div><div class=rect3></div><div class=rect4></div><div class=rect5></div></div></div><script src=/js/live2d/lib/live2d.min.js></script><script src=/js/live2d/framework/Live2DFramework.js></script><script src=/js/live2d/utils/MatrixStack.js></script><script src=/js/live2d/utils/ModelSettingJson.js></script><script src=/js/live2d/PlatformManager.js></script><script src=/js/live2d/LAppDefine.js></script><script src=/js/live2d/LAppModel.js></script><script src=/js/live2d/LAppLive2DManager.js></script><script src=/js/live2d/SampleApp1.js></script><script>sampleApp1();</script><script src=/js/running.js></script><div class=tools-search data-toggle=modal data-target=#myModal><i class="iconfont x-no icon-search"></i></div><div class=tools-music data-toggle=modal data-target=#wyymusic><i class="iconfont x-no icon-ziyuanldpi"></i></div><div class="modal fade" id=myModal><div class="modal-dialog modal-dialog-centered"><div class=modal-content><div class=modal-header><h4 class=modal-title>请输入你想搜索的内容:</h4><button type=button class=close data-dismiss=modal>&times;</button></div><div class=modal-body><input type=text name=searchKeyword id=searchInput placeholder=请输入文章关键字或者标题></div><div class=modal-footer><a><button type=button class="btn btn-secondary">搜索</button></a> <button type=button class="btn btn-secondary" data-dismiss=modal>关闭</button></div></div></div></div><div class="modal fade" id=wyymusic><div class="modal-dialog modal-dialog-centered"><div class=modal-content><iframe frameborder=no border=0 marginwidth=0 marginheight=0 width=auto height=450 src="//music.163.com/outchain/player?type=0&id=5033393769&auto=0&height=430"></iframe></div></div></div><div class=fixed-back><i class="iconfont x-no icon-upa"></i></div><a href="/"><div class=fixed-home><i class="iconfont x-no icon-xuanzhongshangcheng"></i></div></a><div class="container-fluid x-footer"><p class="web-info x-no">Copyright © 2020 Xowen [www.xowen.cn] All Rights Reserved</p><p class="web-info x-no">Power By<span>&nbsp;Xowen</span></p></div><script type=text/javascript>
+</script>
+            </section>
+          
+    </div>
+</div>
+
+
+
+      </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+      <!-- live2d model -->
+      <div class="live2d-box">
+  <canvas id="glcanvas" width="300" height="350">
+                    
+  </canvas>
+  <div class="live2d-msg">
+      <p class="live2d-info-text">
+        君子阳阳，左执簧，右招我由房，其乐只且！
+君子陶陶，左执翿，右招我由敖，其乐只且！
+      </p>
+    </div>  
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+</div>
+
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
+  require.config({
+      paths : {
+          "live2d" : ["/js/live2d/lib/live2d.min"],
+          "Live2DFramework" : ["/js/live2d/framework/Live2DFramework"],
+          "MatrixStack" : ["/js/live2d/utils/MatrixStack"],
+          "ModelSettingJson" : ["/js/live2d/utils/ModelSettingJson"],
+          "PlatformManager" : ["/js/live2d/PlatformManager"],
+          "LAppDefine" : ["/js/live2d/LAppDefine"],
+          "LAppModel" : ["/js/live2d/LAppModel"],
+          "LAppLive2DManager" : ["/js/live2d/LAppLive2DManager"],
+          "SampleApp1" : ["/js/live2d/SampleApp1"]
+      }
+  })
+  require(["live2d","Live2DFramework","MatrixStack","ModelSettingJson","PlatformManager","LAppDefine","LAppModel","LAppLive2DManager","SampleApp1"],
+  function(live2d,Live2DFramework,MatrixStack,ModelSettingJson,PlatformManager,LAppDefine,LAppModel,LAppLive2DManager,SampleApp1){
+    console.log("成功");
+    sampleApp1();
+})
+</script> -->
+
+  <script src="/js/live2d/lib/live2d.min.js"></script>
+
+  <script src="/js/live2d/framework/Live2DFramework.js"></script>
+
+  <script src="/js/live2d/utils/MatrixStack.js"></script>
+
+  <script src="/js/live2d/utils/ModelSettingJson.js"></script>
+  <script src="/js/live2d/PlatformManager.js"></script>
+  <script src="/js/live2d/LAppDefine.js"></script>
+  <script src="/js/live2d/LAppModel.js"></script>
+  <script src="/js/live2d/LAppLive2DManager.js"></script>
+  <script src="/js/live2d/SampleApp1.js"></script>
+  <script>sampleApp1();</script>
+
+  
+  <!-- <script src="http://www.xuanno.net/static/public/live2d/lib/live2d.min.js"></script>
+
+  <script src="http://www.xuanno.net/static/public/live2d/framework/Live2DFramework.js"></script>
+
+  <script src="http://www.xuanno.net/static/public/live2d/utils/MatrixStack.js"></script>
+
+  <script src="http://www.xuanno.net/static/public/live2d/utils/ModelSettingJson.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/PlatformManager.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/LAppDefine.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/LAppModel.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/LAppLive2DManager.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/SampleApp1.js"></script> -->
+
+ 
+    <!-- partial model -->
+   
+    <script src="/js/running.js"></script>
+    <!-- footer  -->
+    <div class="tools-search" data-toggle="modal" data-target="#myModal"> 
+  <i class="iconfont x-no icon-search" ></i>
+</div>
+
+<div class="tools-music" data-toggle="modal" data-target="#wyymusic"> 
+  <i class="iconfont x-no icon-ziyuanldpi" ></i>
+</div>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">请输入你想搜索的内容:</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+          <input type="text" name="searchKeyword" id="searchInput" placeholder="请输入文章关键字或者标题">
+      </div>
+      <!-- 模态框底部 -->
+      <div class="modal-footer">
+        <a href=""><button type="button" class="btn btn-secondary">搜索</button></a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="wyymusic">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=auto height=450 src="//music.163.com/outchain/player?type=0&id=5033393769&auto=0&height=430"></iframe>
+
+    </div>
+  </div>
+</div>
+
+<!-- search -->
+<div class="fixed-back">
+  <i class="iconfont x-no icon-upa"></i>
+</div>
+
+<a href="/">
+<div class="fixed-home">
+  <i class="iconfont x-no icon-xuanzhongshangcheng"></i>
+</div>
+</a>
+
+<div class="container-fluid x-footer" >
+    <p class="web-info x-no">
+      Copyright © 2020 Xowen [www.xowen.cn] All Rights Reserved
+    </p>
+    <p class="web-info x-no">
+      Power By<span> &nbsp;Xowen</span>
+    </p>
+  </div>
+  
+  <script type="text/javascript">
     /* 鼠标特效 */
     var a_idx = 0;
     jQuery(document).ready(function($) {
@@ -64,4 +591,7 @@
             });
         });
     });
-    </script></body></html>
+    </script>   
+</body>
+
+</html>

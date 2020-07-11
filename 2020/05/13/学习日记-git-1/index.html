@@ -1,4 +1,63 @@
-<!DOCTYPE html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=renderer content=webkit><meta http-equiv=Cache-Control content=no-transform><meta http-equiv=Cache-Control content=no-siteapp><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=format-detection content="telephone=no,email=no,adress=no"><meta name=theme-color content=#000000><meta http-equiv=window-target content=_top><title>学习日记--git(1) | Xowen Blog</title><meta name=description content="git &amp; githubgit是一种分布式的版本管理系统，Linux的创造者Linus写的。GitHub是基于git的代码库托管站，也算是程序员的SMS（以码会友），其中一个主要的开源代码发布或托管站git的作用就是对文件进行版本管理，方便在不同版本进行切换修改，类似文件分不同时间备份让后需要时找回其中一份代替，不过更方便使用。GitHub某种程度上就是代码的网盘，也有开源开发商作为代码发"><meta property=og:type content=article><meta property=og:title content=学习日记--git(1)><meta property=og:url content=https://xowen.cn/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/index.html><meta property=og:site_name content=xowen><meta property=og:description content="git &amp; githubgit是一种分布式的版本管理系统，Linux的创造者Linus写的。GitHub是基于git的代码库托管站，也算是程序员的SMS（以码会友），其中一个主要的开源代码发布或托管站git的作用就是对文件进行版本管理，方便在不同版本进行切换修改，类似文件分不同时间备份让后需要时找回其中一份代替，不过更方便使用。GitHub某种程度上就是代码的网盘，也有开源开发商作为代码发"><meta property=og:locale content=zh_CN><meta property=og:image content=https://s1.ax1x.com/2020/05/11/YGTxGF.jpg><meta property=article:published_time content=2020-05-13T12:05:48.000Z><meta property=article:modified_time content=2020-05-13T13:07:43.085Z><meta property=article:author content="John Doe"><meta property=article:tag content=git><meta property=article:tag content=github><meta property=article:tag content=学习><meta name=twitter:card content=summary><meta name=twitter:image content=https://s1.ax1x.com/2020/05/11/YGTxGF.jpg><link rel=canonical href=https://xowen.cn/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/index.html><link rel=stylesheet href=/css/bootstrap.css><script src=https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js></script><script src=https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js></script><script src=https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js></script><link rel=stylesheet href=/css/mainstyle.css><link href=https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/styles/atom-one-dark-reasonable.min.css rel=stylesheet><link rel="shortcut icon" href=/images/fav.ico type=image/x-icon><link rel=stylesheet href=//at.alicdn.com/t/font_1798605_iwfejqu5mz.css><script type=module src=https://cdn.bootcdn.net/ajax/libs/instant.page/3.0.0/instantpage.min.js></script><script>
+<!DOCTYPE html>
+<html  lang=zh>
+
+
+  <head>
+    <meta charset="utf-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#000000" />
+    <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+    <meta http-equiv="window-target" content="_top" />
+  
+    
+    <title>学习日记--git(1) | Xowen Blog</title>
+    <meta name="description" content="git &amp; githubgit是一种分布式的版本管理系统，Linux的创造者Linus写的。GitHub是基于git的代码库托管站，也算是程序员的SMS（以码会友），其中一个主要的开源代码发布或托管站git的作用就是对文件进行版本管理，方便在不同版本进行切换修改，类似文件分不同时间备份让后需要时找回其中一份代替，不过更方便使用。GitHub某种程度上就是代码的网盘，也有开源开发商作为代码发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习日记--git(1)">
+<meta property="og:url" content="https://xowen.cn/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/index.html">
+<meta property="og:site_name" content="xowen">
+<meta property="og:description" content="git &amp; githubgit是一种分布式的版本管理系统，Linux的创造者Linus写的。GitHub是基于git的代码库托管站，也算是程序员的SMS（以码会友），其中一个主要的开源代码发布或托管站git的作用就是对文件进行版本管理，方便在不同版本进行切换修改，类似文件分不同时间备份让后需要时找回其中一份代替，不过更方便使用。GitHub某种程度上就是代码的网盘，也有开源开发商作为代码发">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/11/YGTxGF.jpg">
+<meta property="article:published_time" content="2020-05-13T12:05:48.000Z">
+<meta property="article:modified_time" content="2020-05-13T13:07:43.085Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/11/YGTxGF.jpg">
+    <!-- Canonical links -->
+    <link rel="canonical" href="https://xowen.cn/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/index.html">
+   
+    
+<link rel="stylesheet" href="/css/bootstrap.css">
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    
+<link rel="stylesheet" href="/css/mainstyle.css">
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/styles/atom-one-dark-reasonable.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1798605_iwfejqu5mz.css">
+    <script type="module" src="https://cdn.bootcdn.net/ajax/libs/instant.page/3.0.0/instantpage.min.js"></script>
+    
+    <script>
       (function(){
           var bp = document.createElement('script');
           var curProtocol = window.location.protocol.split(':')[0];
@@ -11,7 +70,108 @@
           var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(bp, s);
       })();
-      </script><meta name=generator content="Hexo 4.2.0"></head><body><div class=container-fluid style="border-bottom: 1px solid #c6c8ca;"><div class=container><nav class="navbar navbar-expand-lg navbar-light"><button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button> <a class=navbar-brand href="/">Xowen</a><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class="nav-item active"><a class=nav-link href="/">首页<span class=sr-only>(current)</span></a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>分类</a><div class=dropdown-menu aria-labelledby=navbarDropdown><ul class=category-list><li class=category-list-item><a class=category-list-link href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class=category-list-count>11</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class=category-list-count>3</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class=category-list-count>2</span></li></ul></div></li><li class=nav-item><a class=nav-link href=/archives>Xowen's 归档</a></li><li class=nav-item><a class=nav-link href=/message>留言板</a></li><li class=nav-item><a class=nav-link href=/about>关于Xowen</a></li></ul><ul class="nav justify-content-end right-links"><li class=nav-item><i class="iconfont icon-QQ"></i> <a class=nav-user href="tencent://QQInterLive/?Cmd=2&Uin=1941352853" target=_blank>QQ</a></li><li class=nav-item><i class="iconfont icon-git"></i> <a class=nav-user href=https://github.com/DriverOwen/DriverOwen.github.io target=_blank>GitHub</a></li><li class=nav-item><div class=checkbox><input type=checkbox data-toggle=tooltip data-placement=right title=打开看板娘! id=live2dButton> <label></label></div></li></ul></div><a class=navbar-brand href=#></a></nav></div></div><div class="container x-padding cover-container"><div class=xowen-cover style="background: url(https://s1.ax1x.com/2020/06/04/tBBz5j.jpg) center center / cover no-repeat;"></div><div class="row x-top-info"><div class=col-md-7><div class=xowen-info><div class=xowen-user><a class=top-avatar href=javascript:;><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg alt=Xowen></a><div class=xowen-texts><p class="top-title x-no"><a href=javascript:;>The only hope in the village</a></p><p class="top-text x-no"><a target=_blank href=https://xowen.cn>村里唯一的希望</a></p></div></div></div></div><div class=col-md-5><div class=x-num-info><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><div class=x-stats id=busuanzi_container_site_pv><p class="x-stats-title x-no" id=busuanzi_value_site_pv>loading...</p><p class="x-stats-text x-no">VISITS</p></div><div class=x-stats><p class="x-stats-title x-no" id=SURVIVA>loadings...</p><p class="x-stats-text x-no">SURVIVA</p><script>
+      </script>
+      
+  <meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+      <!-- header -->
+  <div class="container-fluid" style=" border-bottom: 1px solid #c6c8ca;">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">Xowen</a>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">首页<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                分类
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class="category-list-count">2</span></li></ul>
+                <!-- <div class="dropdown-divider"></div> -->
+                <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+              </div>
+            </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/archives">Xowen's 归档</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/message">留言板</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/about">关于Xowen</a>
+              </li>
+            
+          
+          </ul>
+          <ul class="nav justify-content-end right-links">
+            
+              <li class="nav-item">
+                <i class="iconfont icon-QQ"></i>
+                <a class="nav-user" href="tencent://QQInterLive/?Cmd=2&Uin=1941352853" target="_blank">QQ</a>
+              </li>
+            
+              <li class="nav-item">
+                <i class="iconfont icon-git"></i>
+                <a class="nav-user" href="https://github.com/DriverOwen/DriverOwen.github.io" target="_blank">GitHub</a>
+              </li>
+            
+            <li class="nav-item" >
+             
+              <div class="checkbox">
+                <input type="checkbox" data-toggle="tooltip" data-placement="right" title="打开看板娘!"  id="live2dButton">
+                <label></label>
+              </div>
+              
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand" href="#"></a>
+      </nav>
+    </div>
+  </div>
+  <div class="container x-padding cover-container">
+    <div class="xowen-cover" style="background: url(https://s1.ax1x.com/2020/06/04/tBBz5j.jpg) center center / cover no-repeat;">
+
+    </div>
+    <div class="row x-top-info">
+      <div class="col-md-7">
+        <div class="xowen-info">
+          <div class="xowen-user">
+            <a class="top-avatar" href="javascript:;"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="Xowen"></a>
+            <div class="xowen-texts">
+              <p class="top-title x-no"><a href="javascript:;">The only hope in the village</a></p>
+              <p class="top-text x-no"><a target="_blank" href="https://xowen.cn">村里唯一的希望</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="x-num-info">
+          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+          <div class="x-stats" id="busuanzi_container_site_pv">
+            <p class="x-stats-title x-no" id="busuanzi_value_site_pv">loading...</p>
+            <p class="x-stats-text x-no " id="">VISITS</p>
+          </div>
+          <div class="x-stats">
+            <p class="x-stats-title x-no" id="SURVIVA">loadings...</p>
+            <p class="x-stats-text x-no">SURVIVA</p>
+            <script>
               var now = new Date();
               (function createtime() {
                   var grt= new Date("5/10/2020 13:14:21");
@@ -21,10 +181,290 @@
                   document.getElementById("SURVIVA").innerHTML = dnum+" Days";
               })()
         
-          </script></div><div class=x-stats><p class="x-stats-title x-no">20</p><p class="x-stats-text x-no">POSTS</p></div><div class=x-stats><p class="x-stats-title x-no">14k</p><p class="x-stats-text x-no">WORDS</p></div></div></div></div><nav aria-label=breadcrumb><ol class=breadcrumb>首页 / 2020 / 05 / 13 / 学习日记-git-1 /</ol></nav></div><div class=container><div class=row><div class="col-md-3 x-side-box"><div class=card style="width: auto;"><img class=card-img-top src=https://s1.ax1x.com/2020/05/10/Y1WAjU.jpg alt="Card image cap"><div class=card-body><h5 class=card-title>公告</h5><p class=card-text style="text-align: justify;">大家好，我是xowen，欢迎访问我的博客。本博客采用hexo+github+bootstrap4+ejs制作。本博客主要用来记录我的一些学习过程和一些技术分享。</p></div></div><div class=card style="width: auto;"><div class=card-body><h5 class=card-title>分类</h5><ul class=category-list><li class=category-list-item><a class=category-list-link href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class=category-list-count>11</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class=category-list-count>3</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class=category-list-count>2</span></li><li class=category-list-item><a class=category-list-link href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class=category-list-count>2</span></li></ul></div></div><div class=card style="width: auto;"><div class=card-body><h5 class=card-title>最新文章</h5><ul class="list-group list-group-flush"><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/30/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Css-grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E5%AD%A6%E4%B9%A0-1/">Css grid网格布局学习(1)...</a><p class="hot-article-stats x-no">共 1.5k 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/">Deno会在短期内取代Node吗？[转载]...</a><p class="hot-article-stats x-no">共 1.6k 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0-%E9%87%8D%E6%96%B0%E5%8A%A0%E5%9B%9E%E7%9C%8B%E6%9D%BF%E5%A8%98/">博客更新-重新加回看板娘...</a><p class="hot-article-stats x-no">共 997 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/17/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-2/">学习日记--git(2)...</a><p class="hot-article-stats x-no">共 1.7k 字</p></div></li><li class=list-group-item><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-article-cover-img><div class=hot-article><a href="/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/">学习日记--git(1)...</a><p class="hot-article-stats x-no">共 1.3k 字</p></div></li></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"><div class=card-body><h5 class=card-title>标签云</h5><ul class="list-groups list-group-flush"><a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css3/" style="font-size: 12px;">css3</a> <a href="/tags/deno/" style="font-size: 10px;">deno</a> <a href="/tags/django/" style="font-size: 16px;">django</a> <a href="/tags/ejs/" style="font-size: 20px;">ejs</a> <a href="/tags/git/" style="font-size: 12px;">git</a> <a href="/tags/github/" style="font-size: 12px;">github</a> <a href="/tags/grid/" style="font-size: 10px;">grid</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/js%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">js插件</a> <a href="/tags/live2d/" style="font-size: 10px;">live2d</a> <a href="/tags/nexo/" style="font-size: 18px;">nexo</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/opp/" style="font-size: 10px;">opp</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 10px;">优化</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 12px;">学习</a> <a href="/tags/%E5%B8%83%E5%B1%80/" style="font-size: 10px;">布局</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"><div class=card-body><h5 class=card-title>归档</h5><ul class=archive-list><li class=archive-list-item><a class=archive-list-link href="/archives/2020/05/">2020-05</a><span class=archive-list-count>20</span></li></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"><div class=card-body><h5 class=card-title>最新说说</h5><ul class="list-group list-group-flush"><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li><li class="list-group-item msg-format"><img src=https://s1.ax1x.com/2020/05/09/YlOPBt.jpg class=x-msg-cover-img><div class=new-msg><div class=new-msg-info><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class=new-msg-content><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li></ul></div></div><div class=card style="width: auto;margin-bottom: 10px;"></div></div><div class="col-md-9 x-side-content"><div class=x-blog-info><div class=x-blog-text><p class="x-no x-blog-title">学习日记--git(1)</p></div><div class=x-blog-meta><div class=x-blog-date><i class="iconfont icon-time1"></i> <span>2020-05-13 20:05:48</span></div><div class=x-blog-views><i class="iconfont icon-jianpan"></i> <span>字数: 1.3k</span></div><div id="/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/" data-flag-title=学习日记--git(1) class="x-blog-comments leancloud-visitors"><i class="iconfont icon-view"></i> <span class=leancloud-visitors-count>loading...</span> <span>&nbsp;访问量</span></div></div></div><div class="container x-blog-content"><h3 id=git-amp-github><a href=#git-amp-github class=headerlink title="git &amp; github"></a>git &amp; github</h3><p>git是一种分布式的版本管理系统，Linux的创造者Linus写的。GitHub是基于git的代码库托管站，也算是程序员的SMS（以码会友），其中一个主要的开源代码发布或托管站git的作用就是对文件进行版本管理，方便在不同版本进行切换修改，类似文件分不同时间备份让后需要时找回其中一份代替，不过更方便使用。GitHub某种程度上就是代码的网盘，也有开源开发商作为代码发布、存放、征集Bug和意见用。</p><h3 id=Git本地操作的三个区域><a href=#Git本地操作的三个区域 class=headerlink title=Git本地操作的三个区域></a>Git本地操作的三个区域</h3><ol><li>Git repository<ul><li>最终确定的文件保存到仓库，成为一个新的版本，并且对他人可见</li></ul></li><li>暂存区<ul><li>暂存已经修改的文件，最后统一提交到git仓库</li></ul></li><li>工作区<ul><li>开发，编辑文档的地方<h3 id=工作流程><a href=#工作流程 class=headerlink title=工作流程></a>工作流程</h3>工作区 –&gt; 暂存区 –&gt; repository</li></ul></li></ol><blockquote><p>工作区 –&gt; 开发代码</p></blockquote><p>coding</p><blockquote><p>工作区 –&gt; 暂存区<br>git add . 或者 git add filename到缓存区</p></blockquote><p>可以使用通配符</p><p>如果要将单个文件加入到暂存区，可采用如下类似代码：</p><figure class="highlight dockerfile"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs dockerfile">$ git <span class=hljs-keyword>add</span><span class=bash> readme.txt</span><br></code></pre></td></tr></table></figure><p>如果要将多个文件加入到暂存区，可以采用如下类似代码：</p><figure class="highlight dockerfile"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs dockerfile">$ git <span class=hljs-keyword>add</span><span class=bash> readme.txt ant.txt</span><br></code></pre></td></tr></table></figure><p>文件与文件之间用空格分隔；也可以使用通配符方式批量提交文件：</p><figure class="highlight dockerfile"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs dockerfile">$ git <span class=hljs-keyword>add</span><span class=bash> *.html</span><br></code></pre></td></tr></table></figure><p>上面代码可以将所有的html文件提交到暂存区。</p><p>或者使用</p><figure class="highlight dockerfile"><table><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br></pre></td><td class=code><pre><code class="hljs dockerfile">$ git <span class=hljs-keyword>add</span><span class=bash> all </span><br><br>$ git <span class=hljs-keyword>add</span><span class=bash> .</span><br></code></pre></td></tr></table></figure><p>两者功能在提交类型方面是相同的。</p><p>git add all无论在哪个目录执行都会提交相应文件。</p><p>git add .只能够提交当前目录或者它后代目录下相应文件。</p><h3 id=为什么要有暂存区？><a href=#为什么要有暂存区？ class=headerlink title=为什么要有暂存区？></a>为什么要有暂存区？</h3><p>例子：小明要去买东西，需要我们指定所购买的东西，我们可以先叫小明买一样东西，然后小明回来后再安排他又去买其它东西。但是我们也可以通过一次性给出东西的清单，然后叫小明买回来。在这个过程中，去买东西如同我们要上传代码到github上面去，我们修改了一点就上传一点显然效率很低，所以在开发的时候，我们可以累积到一个功能出现，然后一起提交到github上，这时候缓存区就很好解决了这个问题。（也可以理解味购物车的概念，避免重复去收银台）</p><blockquote><p>暂存区 –&gt; repository</p></blockquote><figure class="highlight nginx"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs nginx"><span class=hljs-attribute>git</span> commit -m <span class=hljs-string>"提交描述"</span><br></code></pre></td></tr></table></figure><h3 id=repository><a href=#repository class=headerlink title=repository></a>repository</h3><p>就是一个文件夹，仓库，用来存放你的代码的地方，也可以存放其它文件。<br>分为本地仓库和github仓库。</p><p>首次安装了git需要进行全局配置</p><figure class="highlight routeros"><table><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br></pre></td><td class=code><pre><code class="hljs routeros">$ git<span class=hljs-built_in> config </span>--global user.name <span class=hljs-string>"用户名"</span><br>$ git<span class=hljs-built_in> config </span>--global user.email <span class=hljs-string>"邮箱地址”</span><br></code></pre></td></tr></table></figure><h3 id=创建仓库><a href=#创建仓库 class=headerlink title=创建仓库></a>创建仓库</h3><p>在本地创建一个目录</p><p>然后进行Git 仓库初始化</p><figure class="highlight ebnf"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs ebnf"><span class=hljs-attribute>git init</span><br></code></pre></td></tr></table></figure><p>ps: 会产生一个.git的隐藏文件夹 不能随意更改</p><h3 id=Git-常用指令操作><a href=#Git-常用指令操作 class=headerlink title="Git 常用指令操作"></a>Git 常用指令操作</h3><p>查看当前状态:</p><figure class="highlight ebnf"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs ebnf"><span class=hljs-attribute>git status</span><br></code></pre></td></tr></table></figure><p>添加到缓存区</p><figure class="highlight dockerfile"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs dockerfile">git <span class=hljs-keyword>add</span><span class=bash> 文件名</span><br></code></pre></td></tr></table></figure><p>提交到本地仓库</p><figure class="highlight nginx"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs nginx"><span class=hljs-attribute>git</span> commit -m <span class=hljs-string>"注释内容"</span><br></code></pre></td></tr></table></figure><h3 id=撤销git-add-添加的内容><a href=#撤销git-add-添加的内容 class=headerlink title="撤销git add 添加的内容"></a>撤销git add 添加的内容</h3><p>使用 git rm 命令，有两种选择,</p><p>一种是 <code>git rm –cached “文件路径”</code>，不删除物理文件，仅将该文件从缓存中删除；</p><p>一种是 <code>git rm –f “文件路径”</code>，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）。</p><p>git –如何撤销已放入缓存区（Index区）的修改<br>修改或新增的文件通过 git add –all命令全部加入缓存区（index区）之后，使用 git status 查看状态</p><p>（git status -s 简单模式查看状态，第一列本地库和缓存区的差异，第二列缓存区和工作目录的差异），</p><p>提示使用 <code>git reset HEAD</code>来取消缓存区的修改。</p><p>不添加参数，撤销所有缓存区的修改。</p><p>另外可以使用<code>git rm –cached 文件名</code>，可以从缓存区移除文件，使该文件变为未跟踪的状态，</p><p>同时下次提交时从本地库中删除。</p><p>注：</p><p>没有带参数的 git reset 命令，默认执行了 –mixed 参数，即用reset版本库到指定版本，并重置缓存区，在上面的命令中指定的目录版本是HEAD，即当前版本，所以实际上没有任何修改，仅是重置了缓存区。</p><h3 id=版本回退><a href=#版本回退 class=headerlink title=版本回退></a>版本回退</h3><p>版本回退分为两步骤进行操作:<br>步骤:</p><ol><li>查看版本，确定需要回到的时刻点</li></ol><p>指令:</p><figure class="highlight applescript"><table><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br></pre></td><td class=code><pre><code class="hljs applescript">git <span class=hljs-built_in>log</span><br>git <span class=hljs-built_in>log</span> <span class=hljs-comment>--pretty=oneline //简化显示</span><br></code></pre></td></tr></table></figure><ol start=2><li>回退操作</li></ol><p>指令:</p><figure class="highlight pgsql"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs pgsql">git <span class=hljs-keyword>reset</span> <span class=hljs-comment>--hard 版本号</span><br></code></pre></td></tr></table></figure><p>版本号可以通过git log查看</p><p>注意:回到过去之后，要想再回到之前最新的版本的时候，则需要使用指令去查看历史操作，<br>以得到最新的commit id。</p><p>指令</p><figure class="highlight angelscript"><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><code class="hljs angelscript">git <span class=hljs-built_in>ref</span>log<br></code></pre></td></tr></table></figure><p>再配合<code>git reset --hard</code>就可以恢复过去的未来操作</p></div><div class=pageLocate><div class=col-md-6><p><a href="/2020/05/17/学习日记-git-2/">上一章:&nbsp;<span>学习日记-git...</span></a></p></div><div class=col-md-6><p style="text-align: right;"><a href="/2020/05/12/技术分享/hexo优化速度-利用instant-page加快页面加载速度/">下一章:&nbsp;<span>技术分享/hex...</span></a></p></div></div><div class=x-blog-footer><section id=comments class=comments><style>
+          </script>
+          </div>
+          <div class="x-stats">
+            
+            <p class="x-stats-title x-no">21</p>
+            <p class="x-stats-text x-no">POSTS</p>
+          </div>
+          <div class="x-stats">
+            <p class="x-stats-title x-no">14.9k</p>
+            <p class="x-stats-text x-no">WORDS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+     
+       首页 / 2020 / 05 / 13 / 学习日记-git-1 / 
+     
+      </ol>
+    </nav>
+  </div>
+ 
+    <div class="container">
+      <div class="row">
+    <div class="col-md-3 x-side-box">
+    <div class="card" style="width: auto;">
+      <img class="card-img-top" src="https://s1.ax1x.com/2020/05/10/Y1WAjU.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">公告</h5>
+        <p class="card-text" style="text-align: justify;">大家好，我是xowen，欢迎访问我的博客。本博客采用hexo+github+bootstrap4+ejs制作。本博客主要用来记录我的一些学习过程和一些技术分享。 </p>
+      </div>
+    </div>
+
+   
+    
+      <div class="card" style="width: auto;">
+  <div class="card-body">
+    <h5 class="card-title">分类</h5>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/nexo%E5%BC%80%E5%8F%91/">nexo开发</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/">生活日志</a><span class="category-list-count">2</span></li></ul>
+  </div>
+</div>
+    
+      <div class="card" style="width: auto;">
+  <div class="card-body">
+    <h5 class="card-title">最新文章</h5>
+    <ul class="list-group list-group-flush">
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/07/11/css3%E5%8A%A0js%E6%A8%A1%E4%BB%BFwin10%E6%97%B6%E9%97%B4%E8%BD%B4%E7%89%B9%E6%95%88/">css3加js模仿win10时间轴特效...</a>
+            <p class="hot-article-stats x-no">共 905 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/30/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Css-grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E5%AD%A6%E4%B9%A0-1/">Css grid网格布局学习(1)...</a>
+            <p class="hot-article-stats x-no">共 1.5k 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/24/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%BF%97/Deno%E4%BC%9A%E5%9C%A8%E7%9F%AD%E6%9C%9F%E5%86%85%E5%8F%96%E4%BB%A3Node%E5%90%97%EF%BC%9F-%E8%BD%AC%E8%BD%BD/">Deno会在短期内取代Node吗？[转载]...</a>
+            <p class="hot-article-stats x-no">共 1.6k 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0-%E9%87%8D%E6%96%B0%E5%8A%A0%E5%9B%9E%E7%9C%8B%E6%9D%BF%E5%A8%98/">博客更新-重新加回看板娘...</a>
+            <p class="hot-article-stats x-no">共 997 字</p>
+          </div>
+      </li>
+      
+    
+      <li class="list-group-item">
+        <img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" alt="" class="x-article-cover-img">
+          <div class="hot-article">
+            <a href="/2020/05/17/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-2/">学习日记--git(2)...</a>
+            <p class="hot-article-stats x-no">共 1.7k 字</p>
+          </div>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+    
+      
+  <div class="card" style="width: auto;margin-bottom: 10px;">
+    <div class="card-body">
+      <h5 class="card-title">标签云</h5>
+      <ul class="list-groups list-group-flush">
+        <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css3/" style="font-size: 14px;">css3</a> <a href="/tags/deno/" style="font-size: 10px;">deno</a> <a href="/tags/django/" style="font-size: 16px;">django</a> <a href="/tags/ejs/" style="font-size: 20px;">ejs</a> <a href="/tags/git/" style="font-size: 12px;">git</a> <a href="/tags/github/" style="font-size: 12px;">github</a> <a href="/tags/grid/" style="font-size: 10px;">grid</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/js%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">js插件</a> <a href="/tags/live2d/" style="font-size: 10px;">live2d</a> <a href="/tags/nexo/" style="font-size: 18px;">nexo</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/opp/" style="font-size: 10px;">opp</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 10px;">优化</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 12px;">学习</a> <a href="/tags/%E5%B8%83%E5%B1%80/" style="font-size: 10px;">布局</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a>
+      </ul>
+    </div>
+  </div>
+  
+    
+      
+
+<div class="card" style="width: auto;margin-bottom: 10px;">
+  <div class="card-body">
+    <h5 class="card-title">归档</h5>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">2020-07</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">2020-05</a><span class="archive-list-count">20</span></li></ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div class="card" style="width: auto;margin-bottom: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">最新说说</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+          <li class="list-group-item msg-format"><img src="https://s1.ax1x.com/2020/05/09/YlOPBt.jpg" class="x-msg-cover-img" alt=""><div class="new-msg"><div class="new-msg-info"><p class="x-no new-msg-user">Xowen</p><p class="new-msg-stats x-no">2020年2月31日</p></div><div class="new-msg-content"><p class="x-no msg-content-basic">七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁。三之日于耜，四之日举趾。同我妇子，馌彼南亩，田畯至喜。</p></div></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="width: auto;margin-bottom: 10px;">
+     
+      
+      
+    </div>
+    
+  </div>
+    
+    
+<div class="col-md-9 x-side-content">
+    <div class="x-blog-info">
+        <div class="x-blog-text">
+            <p class="x-no x-blog-title">学习日记--git(1) 
+            </p>
+        </div>
+        <div class="x-blog-meta">
+            <div class="x-blog-date">
+                <i class="iconfont icon-time1"></i>
+                <span>2020-05-13 20:05:48 </span>
+            </div>
+            <div class="x-blog-views">
+                <i class="iconfont icon-jianpan"></i>
+                <span>字数: 1.3k</span>
+            </div>
+            <div id="/2020/05/13/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-git-1/" data-flag-title="学习日记--git(1)" class="x-blog-comments leancloud-visitors">
+                <i class="iconfont icon-view"></i>
+               
+                <span class="leancloud-visitors-count">loading...</span> <span>&nbsp;访问量</span>
+            </div>
+          
+        </div>
+    </div>
+    <div class="container x-blog-content">
+        <h3 id="git-amp-github"><a href="#git-amp-github" class="headerlink" title="git &amp; github"></a>git &amp; github</h3><p>git是一种分布式的版本管理系统，Linux的创造者Linus写的。GitHub是基于git的代码库托管站，也算是程序员的SMS（以码会友），其中一个主要的开源代码发布或托管站git的作用就是对文件进行版本管理，方便在不同版本进行切换修改，类似文件分不同时间备份让后需要时找回其中一份代替，不过更方便使用。GitHub某种程度上就是代码的网盘，也有开源开发商作为代码发布、存放、征集Bug和意见用。</p>
+<h3 id="Git本地操作的三个区域"><a href="#Git本地操作的三个区域" class="headerlink" title="Git本地操作的三个区域"></a>Git本地操作的三个区域</h3><ol>
+<li>Git repository <ul>
+<li>最终确定的文件保存到仓库，成为一个新的版本，并且对他人可见</li>
+</ul>
+</li>
+<li>暂存区<ul>
+<li>暂存已经修改的文件，最后统一提交到git仓库</li>
+</ul>
+</li>
+<li>工作区<ul>
+<li>开发，编辑文档的地方<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3>工作区 –&gt; 暂存区 –&gt; repository</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>工作区 –&gt; 开发代码</p>
+</blockquote>
+<p>coding</p>
+<blockquote>
+<p>工作区 –&gt; 暂存区<br>git add . 或者 git add filename到缓存区</p>
+</blockquote>
+<p>可以使用通配符</p>
+<p>如果要将单个文件加入到暂存区，可采用如下类似代码：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">$ git <span class="hljs-keyword">add</span><span class="bash"> readme.txt</span><br></code></pre></td></tr></table></figure>
+
+<p>如果要将多个文件加入到暂存区，可以采用如下类似代码：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">$ git <span class="hljs-keyword">add</span><span class="bash"> readme.txt ant.txt</span><br></code></pre></td></tr></table></figure>
+
+<p>文件与文件之间用空格分隔；也可以使用通配符方式批量提交文件：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">$ git <span class="hljs-keyword">add</span><span class="bash"> *.html</span><br></code></pre></td></tr></table></figure>
+
+<p>上面代码可以将所有的html文件提交到暂存区。</p>
+<p>或者使用</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">$ git <span class="hljs-keyword">add</span><span class="bash"> all </span><br><br>$ git <span class="hljs-keyword">add</span><span class="bash"> .</span><br></code></pre></td></tr></table></figure>
+<p>两者功能在提交类型方面是相同的。</p>
+<p>git add all无论在哪个目录执行都会提交相应文件。</p>
+<p>git add .只能够提交当前目录或者它后代目录下相应文件。</p>
+<h3 id="为什么要有暂存区？"><a href="#为什么要有暂存区？" class="headerlink" title="为什么要有暂存区？"></a>为什么要有暂存区？</h3><p>例子：小明要去买东西，需要我们指定所购买的东西，我们可以先叫小明买一样东西，然后小明回来后再安排他又去买其它东西。但是我们也可以通过一次性给出东西的清单，然后叫小明买回来。在这个过程中，去买东西如同我们要上传代码到github上面去，我们修改了一点就上传一点显然效率很低，所以在开发的时候，我们可以累积到一个功能出现，然后一起提交到github上，这时候缓存区就很好解决了这个问题。（也可以理解味购物车的概念，避免重复去收银台）</p>
+<blockquote>
+<p>暂存区 –&gt; repository</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> commit -m <span class="hljs-string">"提交描述"</span><br></code></pre></td></tr></table></figure>
+
+
+<h3 id="repository"><a href="#repository" class="headerlink" title="repository"></a>repository</h3><p>就是一个文件夹，仓库，用来存放你的代码的地方，也可以存放其它文件。<br>分为本地仓库和github仓库。</p>
+<p>首次安装了git需要进行全局配置</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">$ git<span class="hljs-built_in"> config </span>--global user.name <span class="hljs-string">"用户名"</span><br>$ git<span class="hljs-built_in"> config </span>--global user.email <span class="hljs-string">"邮箱地址”</span><br></code></pre></td></tr></table></figure>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>在本地创建一个目录</p>
+<p>然后进行Git 仓库初始化</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git init</span><br></code></pre></td></tr></table></figure>
+<p>ps: 会产生一个.git的隐藏文件夹 不能随意更改</p>
+<h3 id="Git-常用指令操作"><a href="#Git-常用指令操作" class="headerlink" title="Git 常用指令操作"></a>Git 常用指令操作</h3><p>查看当前状态:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git status</span><br></code></pre></td></tr></table></figure>
+<p>添加到缓存区</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">git <span class="hljs-keyword">add</span><span class="bash"> 文件名</span><br></code></pre></td></tr></table></figure>
+<p>提交到本地仓库</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> commit -m <span class="hljs-string">"注释内容"</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="撤销git-add-添加的内容"><a href="#撤销git-add-添加的内容" class="headerlink" title="撤销git add 添加的内容"></a>撤销git add 添加的内容</h3><p>使用 git rm 命令，有两种选择,</p>
+<p>一种是 <code>git rm –cached “文件路径”</code>，不删除物理文件，仅将该文件从缓存中删除；</p>
+<p>一种是 <code>git rm –f “文件路径”</code>，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）。</p>
+<p>git –如何撤销已放入缓存区（Index区）的修改<br>修改或新增的文件通过 git add –all命令全部加入缓存区（index区）之后，使用 git status 查看状态</p>
+<p>（git status -s 简单模式查看状态，第一列本地库和缓存区的差异，第二列缓存区和工作目录的差异），</p>
+<p>提示使用 <code>git reset HEAD</code>来取消缓存区的修改。</p>
+<p>不添加参数，撤销所有缓存区的修改。</p>
+<p>另外可以使用<code>git rm –cached 文件名</code>，可以从缓存区移除文件，使该文件变为未跟踪的状态，</p>
+<p>同时下次提交时从本地库中删除。</p>
+<p>注：</p>
+<p>没有带参数的 git reset 命令，默认执行了 –mixed 参数，即用reset版本库到指定版本，并重置缓存区，在上面的命令中指定的目录版本是HEAD，即当前版本，所以实际上没有任何修改，仅是重置了缓存区。</p>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><p>版本回退分为两步骤进行操作:<br>步骤:</p>
+<ol>
+<li>查看版本，确定需要回到的时刻点</li>
+</ol>
+<p>指令:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">git <span class="hljs-built_in">log</span><br>git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=oneline //简化显示</span><br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>回退操作</li>
+</ol>
+<p>指令:</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard 版本号</span><br></code></pre></td></tr></table></figure>
+<p>版本号可以通过git log查看</p>
+<p>注意:回到过去之后，要想再回到之前最新的版本的时候，则需要使用指令去查看历史操作，<br>以得到最新的commit id。</p>
+<p>指令</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">git <span class="hljs-built_in">ref</span>log<br></code></pre></td></tr></table></figure>
+<p>再配合<code>git reset --hard</code>就可以恢复过去的未来操作</p>
+
+    </div>
+    <div class="pageLocate">
+       <div class="col-md-6">
+    
+        
+            
+            <p><a href="/2020/05/17/学习日记-git-2/">上一章:&nbsp;<span>学习日记-git...</span></a></p>
+           
+        
+       </div>
+       <div class="col-md-6" >
+        
+            
+            <p style="text-align: right;"><a href="/2020/05/12/技术分享/hexo优化速度-利用instant-page加快页面加载速度/">下一章:&nbsp;<span>技术分享/hex...</span></a></p>
+            
+        
+       </div>
+    </div>
+    <div class="x-blog-footer">
+        
+            <section id="comments" class="comments">
+              <style>
                 .comments{margin:30px;padding:10px;background:#fff}
                 @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-              </style><div class=valine_comment></div><script src=//cdn1.lncld.net/static/js/3.0.4/av-min.js></script><script src=//unpkg.com/valine/dist/Valine.min.js></script><script>
+              </style>
+              <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
   new Valine({
       el: '.valine_comment',
       app_id: 'kEVKhcTQTMzzN0RQplG6qnm1-gzGzoHsz',
@@ -34,7 +474,150 @@
       verify: 'true',
       visitor: 'true',
     });
-</script></section></div></div></div></div><script src=https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/highlight.min.js></script><script>hljs.initHighlightingOnLoad();</script><div class=live2d-box><canvas id=glcanvas width=300 height=350></canvas><div class=live2d-msg><p class=live2d-info-text>君子阳阳，左执簧，右招我由房，其乐只且！ 君子陶陶，左执翿，右招我由敖，其乐只且！</p></div><div class=spinner><div class=rect1></div><div class=rect2></div><div class=rect3></div><div class=rect4></div><div class=rect5></div></div></div><script src=/js/live2d/lib/live2d.min.js></script><script src=/js/live2d/framework/Live2DFramework.js></script><script src=/js/live2d/utils/MatrixStack.js></script><script src=/js/live2d/utils/ModelSettingJson.js></script><script src=/js/live2d/PlatformManager.js></script><script src=/js/live2d/LAppDefine.js></script><script src=/js/live2d/LAppModel.js></script><script src=/js/live2d/LAppLive2DManager.js></script><script src=/js/live2d/SampleApp1.js></script><script>sampleApp1();</script><script src=/js/running.js></script><div class=tools-search data-toggle=modal data-target=#myModal><i class="iconfont x-no icon-search"></i></div><div class=tools-music data-toggle=modal data-target=#wyymusic><i class="iconfont x-no icon-ziyuanldpi"></i></div><div class="modal fade" id=myModal><div class="modal-dialog modal-dialog-centered"><div class=modal-content><div class=modal-header><h4 class=modal-title>请输入你想搜索的内容:</h4><button type=button class=close data-dismiss=modal>&times;</button></div><div class=modal-body><input type=text name=searchKeyword id=searchInput placeholder=请输入文章关键字或者标题></div><div class=modal-footer><a><button type=button class="btn btn-secondary">搜索</button></a> <button type=button class="btn btn-secondary" data-dismiss=modal>关闭</button></div></div></div></div><div class="modal fade" id=wyymusic><div class="modal-dialog modal-dialog-centered"><div class=modal-content><iframe frameborder=no border=0 marginwidth=0 marginheight=0 width=auto height=450 src="//music.163.com/outchain/player?type=0&id=5033393769&auto=0&height=430"></iframe></div></div></div><div class=fixed-back><i class="iconfont x-no icon-upa"></i></div><a href="/"><div class=fixed-home><i class="iconfont x-no icon-xuanzhongshangcheng"></i></div></a><div class="container-fluid x-footer"><p class="web-info x-no">Copyright © 2020 Xowen [www.xowen.cn] All Rights Reserved</p><p class="web-info x-no">Power By<span>&nbsp;Xowen</span></p></div><script type=text/javascript>
+</script>
+            </section>
+          
+    </div>
+</div>
+
+
+
+      </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+      <!-- live2d model -->
+      <div class="live2d-box">
+  <canvas id="glcanvas" width="300" height="350">
+                    
+  </canvas>
+  <div class="live2d-msg">
+      <p class="live2d-info-text">
+        君子阳阳，左执簧，右招我由房，其乐只且！
+君子陶陶，左执翿，右招我由敖，其乐只且！
+      </p>
+    </div>  
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+</div>
+
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
+  require.config({
+      paths : {
+          "live2d" : ["/js/live2d/lib/live2d.min"],
+          "Live2DFramework" : ["/js/live2d/framework/Live2DFramework"],
+          "MatrixStack" : ["/js/live2d/utils/MatrixStack"],
+          "ModelSettingJson" : ["/js/live2d/utils/ModelSettingJson"],
+          "PlatformManager" : ["/js/live2d/PlatformManager"],
+          "LAppDefine" : ["/js/live2d/LAppDefine"],
+          "LAppModel" : ["/js/live2d/LAppModel"],
+          "LAppLive2DManager" : ["/js/live2d/LAppLive2DManager"],
+          "SampleApp1" : ["/js/live2d/SampleApp1"]
+      }
+  })
+  require(["live2d","Live2DFramework","MatrixStack","ModelSettingJson","PlatformManager","LAppDefine","LAppModel","LAppLive2DManager","SampleApp1"],
+  function(live2d,Live2DFramework,MatrixStack,ModelSettingJson,PlatformManager,LAppDefine,LAppModel,LAppLive2DManager,SampleApp1){
+    console.log("成功");
+    sampleApp1();
+})
+</script> -->
+
+  <script src="/js/live2d/lib/live2d.min.js"></script>
+
+  <script src="/js/live2d/framework/Live2DFramework.js"></script>
+
+  <script src="/js/live2d/utils/MatrixStack.js"></script>
+
+  <script src="/js/live2d/utils/ModelSettingJson.js"></script>
+  <script src="/js/live2d/PlatformManager.js"></script>
+  <script src="/js/live2d/LAppDefine.js"></script>
+  <script src="/js/live2d/LAppModel.js"></script>
+  <script src="/js/live2d/LAppLive2DManager.js"></script>
+  <script src="/js/live2d/SampleApp1.js"></script>
+  <script>sampleApp1();</script>
+
+  
+  <!-- <script src="http://www.xuanno.net/static/public/live2d/lib/live2d.min.js"></script>
+
+  <script src="http://www.xuanno.net/static/public/live2d/framework/Live2DFramework.js"></script>
+
+  <script src="http://www.xuanno.net/static/public/live2d/utils/MatrixStack.js"></script>
+
+  <script src="http://www.xuanno.net/static/public/live2d/utils/ModelSettingJson.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/PlatformManager.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/LAppDefine.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/LAppModel.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/LAppLive2DManager.js"></script>
+  <script src="http://www.xuanno.net/static/public/live2d/SampleApp1.js"></script> -->
+
+ 
+    <!-- partial model -->
+   
+    <script src="/js/running.js"></script>
+    <!-- footer  -->
+    <div class="tools-search" data-toggle="modal" data-target="#myModal"> 
+  <i class="iconfont x-no icon-search" ></i>
+</div>
+
+<div class="tools-music" data-toggle="modal" data-target="#wyymusic"> 
+  <i class="iconfont x-no icon-ziyuanldpi" ></i>
+</div>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">请输入你想搜索的内容:</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+          <input type="text" name="searchKeyword" id="searchInput" placeholder="请输入文章关键字或者标题">
+      </div>
+      <!-- 模态框底部 -->
+      <div class="modal-footer">
+        <a href=""><button type="button" class="btn btn-secondary">搜索</button></a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="wyymusic">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=auto height=450 src="//music.163.com/outchain/player?type=0&id=5033393769&auto=0&height=430"></iframe>
+
+    </div>
+  </div>
+</div>
+
+<!-- search -->
+<div class="fixed-back">
+  <i class="iconfont x-no icon-upa"></i>
+</div>
+
+<a href="/">
+<div class="fixed-home">
+  <i class="iconfont x-no icon-xuanzhongshangcheng"></i>
+</div>
+</a>
+
+<div class="container-fluid x-footer" >
+    <p class="web-info x-no">
+      Copyright © 2020 Xowen [www.xowen.cn] All Rights Reserved
+    </p>
+    <p class="web-info x-no">
+      Power By<span> &nbsp;Xowen</span>
+    </p>
+  </div>
+  
+  <script type="text/javascript">
     /* 鼠标特效 */
     var a_idx = 0;
     jQuery(document).ready(function($) {
@@ -64,4 +647,7 @@
             });
         });
     });
-    </script></body></html>
+    </script>   
+</body>
+
+</html>
