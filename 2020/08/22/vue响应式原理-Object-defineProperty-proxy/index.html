@@ -22,25 +22,25 @@
     <meta http-equiv="window-target" content="_top" />
   
     
-    <title>我的第二篇文章 | Xowen Blog</title>
-    <meta name="description" content="有什么问题码?一个菜鸟的个人博客，用来发布一些学习感悟和技术文章  殷其雷，在南山之阳。何斯违斯，莫敢或遑？振振君子，归哉归哉！殷其雷，在南山之侧。何斯违斯，莫敢遑息？振振君子，归哉归哉！殷其雷，在南山之下。何斯违斯，莫或遑处？振振君子，归哉归哉！  Xowen.cn有哪些功能？ 方便的博客发布功能 使用nodejs+express+mysql搭建的一个轻量级个人博客 具有后台管理功能，支持动态查">
+    <title>vue响应式原理--Object.defineProperty &amp; proxy | Xowen Blog</title>
+    <meta name="description" content="深入理解vue响应式原理学习vue有一段时间了，vue中核心思想就是数据响应式，实现了数据的双向绑定，减少了操作dom频次。 相信大家都有这个疑惑  Vue 内部是如何监听数据的改变？  vue2.x 采用Object.defineProperty -&gt; 监听对象属性的改变 vue3.x 采用proxy代理来实现  -&gt; 监听对象属性的改变   数据发生改变时，Vue是如何知道要通知哪">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第二篇文章">
-<meta property="og:url" content="https://xowen.cn/2020/05/09/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:title" content="vue响应式原理--Object.defineProperty &amp; proxy">
+<meta property="og:url" content="https://xowen.cn/2020/08/22/vue%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-Object-defineProperty-proxy/index.html">
 <meta property="og:site_name" content="xowen">
-<meta property="og:description" content="有什么问题码?一个菜鸟的个人博客，用来发布一些学习感悟和技术文章  殷其雷，在南山之阳。何斯违斯，莫敢或遑？振振君子，归哉归哉！殷其雷，在南山之侧。何斯违斯，莫敢遑息？振振君子，归哉归哉！殷其雷，在南山之下。何斯违斯，莫或遑处？振振君子，归哉归哉！  Xowen.cn有哪些功能？ 方便的博客发布功能 使用nodejs+express+mysql搭建的一个轻量级个人博客 具有后台管理功能，支持动态查">
+<meta property="og:description" content="深入理解vue响应式原理学习vue有一段时间了，vue中核心思想就是数据响应式，实现了数据的双向绑定，减少了操作dom频次。 相信大家都有这个疑惑  Vue 内部是如何监听数据的改变？  vue2.x 采用Object.defineProperty -&gt; 监听对象属性的改变 vue3.x 采用proxy代理来实现  -&gt; 监听对象属性的改变   数据发生改变时，Vue是如何知道要通知哪">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2020/05/09/Y1Ap0U.jpg">
-<meta property="article:published_time" content="2020-05-09T08:38:33.000Z">
-<meta property="article:modified_time" content="2020-05-09T14:49:24.233Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/22/ddQyh6.jpg">
+<meta property="article:published_time" content="2020-08-22T12:44:57.000Z">
+<meta property="article:modified_time" content="2020-08-22T13:21:09.297Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="nexo">
-<meta property="article:tag" content="ejs">
-<meta property="article:tag" content="django">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="es6">
+<meta property="article:tag" content="proxy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/09/Y1Ap0U.jpg">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/08/22/ddQyh6.jpg">
     <!-- Canonical links -->
-    <link rel="canonical" href="https://xowen.cn/2020/05/09/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
+    <link rel="canonical" href="https://xowen.cn/2020/08/22/vue%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-Object-defineProperty-proxy/index.html">
    
     
 <link rel="stylesheet" href="/css/bootstrap.css">
@@ -198,7 +198,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
      
-       首页 / 2020 / 05 / 09 / 技术分享 / 我的第二篇文章 / 
+       首页 / 2020 / 08 / 22 / vue响应式原理-Object-defineProperty-proxy / 
      
       </ol>
     </nav>
@@ -325,19 +325,19 @@
 <div class="col-md-9 x-side-content">
     <div class="x-blog-info">
         <div class="x-blog-text">
-            <p class="x-no x-blog-title">我的第二篇文章 
+            <p class="x-no x-blog-title">vue响应式原理--Object.defineProperty & proxy 
             </p>
         </div>
         <div class="x-blog-meta">
             <div class="x-blog-date">
                 <i class="iconfont icon-time1"></i>
-                <span>2020-05-09 16:38:33 </span>
+                <span>2020-08-22 20:44:57 </span>
             </div>
             <div class="x-blog-views">
                 <i class="iconfont icon-jianpan"></i>
-                <span>字数: 413</span>
+                <span>字数: 1.3k</span>
             </div>
-            <div id="/2020/05/09/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" data-flag-title="我的第二篇文章" class="x-blog-comments leancloud-visitors">
+            <div id="/2020/08/22/vue%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-Object-defineProperty-proxy/" data-flag-title="vue响应式原理--Object.defineProperty &amp; proxy" class="x-blog-comments leancloud-visitors">
                 <i class="iconfont icon-view"></i>
                
                 <span class="leancloud-visitors-count">loading...</span> <span>&nbsp;访问量</span>
@@ -346,65 +346,55 @@
         </div>
     </div>
     <div class="container x-blog-content">
-        <h2 id="有什么问题码"><a href="#有什么问题码" class="headerlink" title="有什么问题码?"></a>有什么问题码?</h2><p>一个菜鸟的个人博客，用来发布一些学习感悟和技术文章</p>
-<blockquote>
-<p>殷其雷，在南山之阳。何斯违斯，莫敢或遑？振振君子，归哉归哉！<br>殷其雷，在南山之侧。何斯违斯，莫敢遑息？振振君子，归哉归哉！<br>殷其雷，在南山之下。何斯违斯，莫或遑处？振振君子，归哉归哉！</p>
-</blockquote>
-<h2 id="Xowen-cn有哪些功能？"><a href="#Xowen-cn有哪些功能？" class="headerlink" title="Xowen.cn有哪些功能？"></a>Xowen.cn有哪些功能？</h2><ul>
-<li>方便的<code>博客发布</code>功能<ul>
-<li>使用<code>nodejs</code>+<code>express</code>+<code>mysql</code>搭建的一个轻量级个人博客</li>
-<li>具有后台管理功能，支持动态查询博客</li>
-<li>支持<code>markdown</code></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs Javascript"><span class="hljs-keyword">let</span> func=<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>&#123;<br>  <span class="hljs-built_in">console</span>.log(Hello world);<br>&#125;<br><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);<br><span class="hljs-keyword">var</span> router = express.Router();<br><span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);<br><span class="hljs-comment">/*添加 markdown 模块 */</span><br><span class="hljs-keyword">const</span> MarkdownIt = <span class="hljs-built_in">require</span>(<span class="hljs-string">'markdown-it'</span>)<br><span class="hljs-keyword">const</span> hljs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'highlight.js'</span>)<br><br><span class="hljs-comment">/* GET home page. */</span><br>router.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res, next</span>) </span>&#123;<br>  res.render(<span class="hljs-string">'index'</span>, &#123;<br>    title: <span class="hljs-string">'Express'</span><br>  &#125;);<br>&#125;);<br>router.get(<span class="hljs-string">'/blog'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res, next</span>) </span>&#123;<br>  res.render(<span class="hljs-string">'index'</span>, &#123;<br>    title: <span class="hljs-string">'Express'</span><br>  &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
-
-<h3 id="博客分层为"><a href="#博客分层为" class="headerlink" title="博客分层为:"></a>博客分层为:</h3><ul>
-<li><code>首页模块</code></li>
-<li><code>博客内容模块</code></li>
-<li><code>留言板模块</code></li>
-<li><code>后台管理模块</code><ul>
-<li><code>博客发布模板</code></li>
-<li><code>博客修改模块</code></li>
-<li><code>博客查询模块</code></li>
-<li><code>博客删除模块</code></li>
-<li><code>后台统计模块</code></li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/cover2.jpg" alt="mahua"></p>
-<h2 id="采用技术"><a href="#采用技术" class="headerlink" title="采用技术"></a>采用技术</h2><ol>
-<li>nodejs</li>
-<li>express框架</li>
-<li>ejs模板</li>
-<li>markdown语法</li>
-<li>bootstrap4框架<h2 id="有问题反馈"><a href="#有问题反馈" class="headerlink" title="有问题反馈"></a>有问题反馈</h2>有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</li>
-</ol>
+        <h1 id="深入理解vue响应式原理"><a href="#深入理解vue响应式原理" class="headerlink" title="深入理解vue响应式原理"></a>深入理解vue响应式原理</h1><p>学习<code>vue</code>有一段时间了，<code>vue</code>中核心思想就是数据响应式，实现了数据的双向绑定，减少了操作dom频次。</p>
+<p>相信大家都有这个疑惑</p>
+<ol>
+<li><p>Vue 内部是如何监听数据的改变？</p>
 <ul>
-<li>邮件: <a href="mailto:chinaloveowen@gmail.com">chinaloveowen@gmail.com</a></li>
-<li>微信: <code>oweni</code></li>
-<li>weibo: <a href="http://weibo.com/ihubo" target="_blank" rel="noopener">@Xowen</a></li>
-<li>twitter: <a href="http://twitter.com/ihubo" target="_blank" rel="noopener">@Xowen</a></li>
+<li>vue2.x 采用Object.defineProperty -&gt; 监听对象属性的改变</li>
+<li>vue3.x 采用proxy代理来实现  -&gt; 监听对象属性的改变</li>
 </ul>
-<h2 id="请Xowen喝一杯奶茶"><a href="#请Xowen喝一杯奶茶" class="headerlink" title="请Xowen喝一杯奶茶"></a>请Xowen喝一杯奶茶</h2><p>在兴趣的驱动下,写一个<code>个人博客</code>模板，有欣喜，也还有汗水，希望将它做出一个成熟的模板，也希望大家支持。</p>
-<h2 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h2><p>Xowen 四川农业大须在读学生 性别男 爱好女</p>
-<p>Edit By <a href="http://Xowen.cn">Xowen</a></p>
+</li>
+<li><p>数据发生改变时，Vue是如何知道要通知哪些数据发送变换？</p>
+<ul>
+<li>答案是发布者订阅模式</li>
+</ul>
+</li>
+</ol>
+<p>响应式的原理可以通过这个图片来理解</p>
+<p><img src="https://img-blog.csdnimg.cn/20190411134145282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dvbGRwcm9n,size_16,color_FFFFFF,t_70" alt=""></p>
+<p>在<code>vue2.x</code>版本里 作者是利用<code>Object.defineProperty</code>中的get和set来实现数据劫持，从而绑定一些响应事件来达到数据响应式的效果</p>
+<blockquote>
+<p><code>Object.defineProperty()</code> 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。</p>
+</blockquote>
+<blockquote>
+<p>get<br>属性的 <code>getter</code> 函数，如果没有 <code>getter</code>，则为 <code>undefined</code>。当访问该属性时，会调用此函数。执行时不传入任何参数，但是会传入 <code>this</code> 对象（由于继承关系，这里的<code>this</code>并不一定是定义该属性的对象）。该函数的返回值会被用作属性的值。<br>默认为 <code>undefined</code>。</p>
+</blockquote>
+<blockquote>
+<p>set<br>属性的 <code>setter</code> 函数，如果没有 <code>setter</code>,则为 <code>undefined</code>。当属性值被修改时，会调用此函数。该方法接受一个参数（也就是被赋予的新值），会传入赋值时的 <code>this</code> 对象。<br>默认为 <code>undefined</code>。</p>
+</blockquote>
+<p>每当我们访问或者修改<code>vue</code>实列<code>data</code>里面的数据时，就会触发<code>get</code>和<code>set</code>的回调函数，所以再加上<code>vue</code>的发布者订阅模式就可以实现数据响应式了</p>
+<p>以下是手写的响应式代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs js">  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Vue</span> </span>&#123;<br><br>    <span class="hljs-keyword">constructor</span>(options=&#123;&#125;)&#123;<br>      <span class="hljs-keyword">this</span>.el = <span class="hljs-built_in">document</span>.querySelector(options.el)<br>      <span class="hljs-keyword">this</span>.data = options.data()<br>      <span class="hljs-keyword">this</span>.Observe(<span class="hljs-keyword">this</span>.data)<br>      <span class="hljs-keyword">this</span>.Compiler(<span class="hljs-keyword">this</span>.el)<br>    &#125;<br>    <br>    Observe(data, vm)&#123;<br>     <br>      <span class="hljs-built_in">Object</span>.keys(data).forEach(<span class="hljs-function"><span class="hljs-params">key</span> =&gt;</span> &#123;<br>        <span class="hljs-keyword">const</span> dep = <span class="hljs-keyword">new</span> Dep() <br>        <span class="hljs-comment">/* 实现一对多的数据更新 页面中重复多个地方使用同一数据时，统一更新  也就是一个data对应一个dep对象*/</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        例如现在的实列数据data中</span><br><span class="hljs-comment">          message -&gt; dep</span><br><span class="hljs-comment">          name -&gt; dep</span><br><span class="hljs-comment">        */</span><br>        <span class="hljs-keyword">let</span> value = data[key]<br>        <span class="hljs-comment">//console.log(value);</span><br>        <span class="hljs-comment">/* 绑定了set和get事件 只要访问或者修改属性 就会触发回调函数*/</span><br>        <span class="hljs-built_in">Object</span>.defineProperty(data, key, &#123;<br>          <span class="hljs-keyword">set</span>(newValue)&#123;<br>           <span class="hljs-comment">// console.log('监听到' + key + '改变');</span><br>            <span class="hljs-comment">/* 监听到了改变，告诉订阅者发送改变 */</span><br>            <span class="hljs-keyword">if</span>(newValue !== value) &#123;<br>              value = newValue<br>              dep.notify()<br>            &#125;<br>          &#125;,<br>          <span class="hljs-keyword">get</span>()&#123;<br>           <span class="hljs-comment">// console.log('获取' + key + '对应的值')</span><br>           <span class="hljs-comment">// console.log(Dep.target);</span><br>            <span class="hljs-keyword">if</span>(Dep.target) &#123;<br>              dep.addSubs(Dep.target)<br>             <span class="hljs-built_in">console</span>.log(dep);<br>            &#125;<br>            <span class="hljs-keyword">return</span> value<br>          &#125;<br>        &#125;)<br>      &#125;)<br>    &#125;<br>  <br>    Compiler(el)&#123;<br>      <span class="hljs-comment">/* 获取要渲染的dom内容 */</span><br>      <span class="hljs-keyword">const</span> _this = <span class="hljs-keyword">this</span> <span class="hljs-comment">/* 防止this指向发生改变 */</span><br>      <span class="hljs-keyword">const</span> childrens = el.children<br><br>      <span class="hljs-keyword">if</span>(!childrens.length) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(el.id + <span class="hljs-string">'挂载元素里面内容为空！'</span>)<br>      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; childrens.length; i++ )&#123;<br>        <span class="hljs-keyword">const</span> node = childrens[i]<br><br>        <span class="hljs-comment">/* 获取有v-text属性的dom 实施渲染 */</span><br>        <span class="hljs-keyword">if</span>(node.hasAttribute(<span class="hljs-string">'v-text'</span>))&#123;<br>          <span class="hljs-keyword">const</span> dataName = node.getAttribute(<span class="hljs-string">'v-text'</span>)<br>          <span class="hljs-keyword">new</span> Watcher(dataName, node, _this, <span class="hljs-string">'innerHTML'</span>)<br>        &#125;<br>        <span class="hljs-keyword">if</span>(node.hasAttribute(<span class="hljs-string">'v-model'</span>)) &#123;<br>          <span class="hljs-keyword">const</span> dataName = node.getAttribute(<span class="hljs-string">'v-model'</span>)<br>          <span class="hljs-keyword">new</span> Watcher(dataName, node, _this, <span class="hljs-string">'value'</span>)<br>          node.addEventListener(<span class="hljs-string">'input'</span>, (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>              <span class="hljs-keyword">this</span>.data[dataName] = node.value<br>            &#125;<br>          &#125;)().bind(<span class="hljs-keyword">this</span>))<br>        &#125;<br>      &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>上面的代码中在 <code>new Vue</code>的时候，内部会触发一个<code>Observer</code>劫持监听所有属性，同时产生<code>dep</code>发布者，当属性触发<code>set</code>或者<code>get</code>时<code>dep</code>就通知或者添加订阅者</p>
+<p>还会有一个<code>Compiler</code>解析指令，订阅数据变化，添加<code>Watcher</code>订阅者，在watcher里面会有一个update的方法，用于更新数据。在<code>Observer</code>里面会通过<code>Object.definepropry</code>方法对数据进行劫持，在<code>get</code>中添加依赖所依赖的<code>watcher</code>，当触发<code>set</code>时说明有数据变化，此时调用<code>dep.notify</code>方法，<code>dep.notify</code>又会触发<code>watcher</code>的<code>update</code>方法来更新数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs js">  <span class="hljs-comment">/* 发布者订阅者模式 */</span><br><span class="hljs-comment">/* 发布者 */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dep</span> </span>&#123;<br><br>  <span class="hljs-keyword">constructor</span>()&#123;<br>    <span class="hljs-keyword">this</span>.target = <span class="hljs-literal">null</span><br>    <span class="hljs-comment">/* 记录订阅者 */</span><br>    <span class="hljs-keyword">this</span>.subs = []<br>  &#125;<br><br>  addSubs(watcher)&#123;<br>    <span class="hljs-keyword">this</span>.subs.push(watcher)<br>  &#125;<br><br>  notify()&#123;<br>    <span class="hljs-keyword">this</span>.subs.forEach(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> &#123;<br>      item.update()<br>    &#125;)<br>  &#125;<br><br>&#125;<br><span class="hljs-comment">/* 订阅者 */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Watcher</span> </span>&#123;<br><br>  <span class="hljs-keyword">constructor</span>(name, el, vm, attr)&#123;<br>    <span class="hljs-keyword">this</span>.name = name<br>    <span class="hljs-keyword">this</span>.el = el <br>    <span class="hljs-keyword">this</span>.vm = vm<br>    <span class="hljs-keyword">this</span>.attr = attr<br>    <span class="hljs-keyword">this</span>.update()<br>  &#125;<br><br>  update()&#123;<br>    <span class="hljs-comment">/* 更新页面 实现响应式 */</span><br>    Dep.target = <span class="hljs-keyword">this</span> <span class="hljs-comment">// 释放当前订阅者 </span><br>    <span class="hljs-comment">//console.log(this.name + '发送了更新----');</span><br><br>    <span class="hljs-keyword">this</span>.el[<span class="hljs-keyword">this</span>.attr] = <span class="hljs-keyword">this</span>.vm.data[<span class="hljs-keyword">this</span>.name] <span class="hljs-comment">//执行到这时会触发get回调，所以Dep会获取到当前的watcher</span><br>    Dep.target = <span class="hljs-literal">null</span> <span class="hljs-comment">// 释放当前订阅者 </span><br>  &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="实列代码"><a href="#实列代码" class="headerlink" title="实列代码"></a>实列代码</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>vue响应式实现<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><br><span class="css">      <span class="hljs-selector-id">#app</span> &#123;</span><br>        position: fixed;<br>        left: 50%;<br>        top: 50%;<br>        transform: translate(-50%,-50%);<br><span class="css">        <span class="hljs-selector-tag">background</span>: <span class="hljs-selector-id">#f6f6f6</span>;</span><br>        border: 1px solid salmon;<br>        min-width: 500px;<br>        min-height: 500px;<br>      &#125;<br>      div&#123;<br><span class="css">        <span class="hljs-selector-tag">padding</span><span class="hljs-selector-pseudo">:10px</span>;</span><br>        font-weight: 500;<br>      &#125;<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">'message'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">'message'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">'name'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">'name'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">'message'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"phone"</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"phone"</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../vue.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><br>  <br><span class="actionscript"><span class="hljs-keyword">const</span> App = <span class="hljs-keyword">new</span> Vue(&#123;</span><br><span class="actionscript">  el: <span class="hljs-string">"#app"</span>,</span><br>  data()&#123;<br><span class="actionscript">    <span class="hljs-keyword">return</span> &#123;</span><br><span class="actionscript">      message: <span class="hljs-string">"hello world"</span>,</span><br><span class="actionscript">      name: <span class="hljs-string">"xowen"</span>,</span><br><span class="actionscript">      phone: <span class="hljs-string">"1567489789"</span></span><br>    &#125;<br>  &#125;<br>&#125;)<br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h1 id="运行效果"><a href="#运行效果" class="headerlink" title="运行效果"></a>运行效果</h1><p><img src="https://s1.ax1x.com/2020/08/22/dd3RjU.png" alt=""><br><img src="https://s1.ax1x.com/2020/08/22/dd32cT.png" alt=""></p>
+<hr>
 
     </div>
     <div class="pageLocate">
        <div class="col-md-6">
     
         
-            
-            <p><a href="/2020/05/09/生活日志/我的第三篇文章/">上一章:&nbsp;<span>生活日志/我的第...</span></a></p>
-           
-        
        </div>
        <div class="col-md-6" >
         
             
-            <p style="text-align: right;"><a href="/2020/05/09/学习日记/我的第一篇文章 copy 9/">下一章:&nbsp;<span>学习日记/我的第...</span></a></p>
+            <p style="text-align: right;"><a href="/2020/08/11/知乎问答网站仿写-调用API接口/">下一章:&nbsp;<span>知乎问答网站仿写...</span></a></p>
             
         
        </div>
