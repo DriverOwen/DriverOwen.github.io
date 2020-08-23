@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xowen.cn/2020/08/23/Vue%E6%A8%A1%E4%BB%BF%E8%98%91%E8%8F%87%E8%A1%97%E7%A7%BB%E5%8A%A8%E5%95%86%E5%9F%8E%E5%BC%80%E5%8F%91/</loc>
+    
+    <lastmod>2020-08-23T13:53:03.835Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xowen.cn/2020/08/22/vue%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-Object-defineProperty-proxy/</loc>
     
     <lastmod>2020-08-22T14:18:07.554Z</lastmod>
