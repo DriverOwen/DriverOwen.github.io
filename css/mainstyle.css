@@ -10,11 +10,12 @@ body{
   /* background: url('../images/wallhaven-lmx8xy.jpg'); */
   /* background-image: url('https://z3.ax1x.com/2021/03/21/64zYa8.png'); */
   background-image: url('https://z3.ax1x.com/2021/03/23/67KV2Q.png');
+  /* background-image: url('../images/bgg2.jpg'); */
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
- 
-  
+  /* background-position: bottom; */
+  /* color: #000; */
 }
 .iconfont{
   margin-right: 5px;
@@ -222,7 +223,7 @@ blockquote{
   
   width: auto;
   word-wrap: break-word;
-  background-color: #fff;
+  /* background-color: #fff; */
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -368,7 +369,9 @@ blockquote{
   background-color: transparent;
   border-top: 1px solid #ccc;
   margin-top: 25px;
+  padding-top: 10px;
   padding-bottom: 10px;
+  box-shadow: 10px -5px 15px 0 rgb(0 0 0 / 20%);
 }
 .web-info{
   text-align: center;
@@ -422,7 +425,7 @@ blockquote{
   border-radius: 5px;
   
   transition: background 0.5s;
-  border:1px solid #737088;
+  /* border:1px solid #737088; */
 }
 .fixed-back{
   position: fixed;
@@ -439,7 +442,7 @@ blockquote{
   border-radius: 5px;
   display: none;
   transition: background 0.5s;
-  border:1px solid #737088;
+  /* border:1px solid #737088; */
 }
 .fixed-home:hover,.fixed-back:hover,.tools-search:hover{
   background-color: #ECEBF1;
@@ -699,7 +702,7 @@ blockquote{
   background-image: url("/images/right.png");
 }
 .pagination .current{
-  background-color: rgb(233,236,239);
+  background-color: #adafca;
 }
 .myPage{
   margin-top: 20px;

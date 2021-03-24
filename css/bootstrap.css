@@ -4853,7 +4853,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  /* background-color: #fff; */
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -5636,7 +5636,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   display: flex;
   padding: 0.25rem 0rem;
   align-items: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   font-size: 0.8rem;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
