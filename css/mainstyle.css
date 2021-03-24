@@ -51,7 +51,7 @@ blockquote{
 }
 
 .x-padding {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 5px;
 }
 
@@ -291,6 +291,7 @@ blockquote{
   min-height: 120px;
   padding: 5px;
 }
+
 .article-category-list,.article-tag-list-item{
   padding: 2px;
   padding-left: 4px;
