@@ -57,7 +57,7 @@
 
     <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.1/styles/atom-one-dark-reasonable.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="/images/fav.ico" type="image/x-icon">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1798605_ldvnhuapmuf.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1798605_rglfsa36dt.css">
     <script type="module" src="https://cdn.bootcdn.net/ajax/libs/instant.page/3.0.0/instantpage.min.js"></script>
     
     <script>
@@ -76,9 +76,9 @@
       </script>
       
   <meta name="generator" content="Hexo 4.2.0"></head>
-<body>
+<body class="myBody">
       <!-- header -->
-  <div class="container-fluid" style=" box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);">
+  <div class="container-fluid ani-box x-nav" style=" box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -132,20 +132,19 @@
               </li>
             
             <li class="nav-item" >
-             
               <div class="checkbox">
                 <input type="checkbox" data-toggle="tooltip" data-placement="right" title="打开看板娘!"  id="live2dButton">
                 <label></label>
               </div>
-              
             </li>
+            
           </ul>
         </div>
         <a class="navbar-brand" href="#"></a>
       </nav>
     </div>
   </div>
-  <div class="container x-padding cover-container">
+  <div class="container x-padding ani-box cover-container">
     <div class="xowen-cover" style="background: url(https://z3.ax1x.com/2021/03/23/67KE8g.png) center center / cover no-repeat;">
 
     </div>
@@ -205,7 +204,7 @@
     </nav>
   </div>
  
-    <div class="container">
+    <div class="container x-main-content ani-box">
       <div class="row">
     <div class="col-md-3 x-side-box">
     <div class="card" style="width: auto;">
@@ -479,27 +478,6 @@
     </div>
 </div>
 
-<!-- <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js"></script>
-<script>
-  require.config({
-      paths : {
-          "live2d" : ["/js/live2d/lib/live2d.min"],
-          "Live2DFramework" : ["/js/live2d/framework/Live2DFramework"],
-          "MatrixStack" : ["/js/live2d/utils/MatrixStack"],
-          "ModelSettingJson" : ["/js/live2d/utils/ModelSettingJson"],
-          "PlatformManager" : ["/js/live2d/PlatformManager"],
-          "LAppDefine" : ["/js/live2d/LAppDefine"],
-          "LAppModel" : ["/js/live2d/LAppModel"],
-          "LAppLive2DManager" : ["/js/live2d/LAppLive2DManager"],
-          "SampleApp1" : ["/js/live2d/SampleApp1"]
-      }
-  })
-  require(["live2d","Live2DFramework","MatrixStack","ModelSettingJson","PlatformManager","LAppDefine","LAppModel","LAppLive2DManager","SampleApp1"],
-  function(live2d,Live2DFramework,MatrixStack,ModelSettingJson,PlatformManager,LAppDefine,LAppModel,LAppLive2DManager,SampleApp1){
-    console.log("成功");
-    sampleApp1();
-})
-</script> -->
 
   <script src="/js/live2d/lib/live2d.min.js"></script>
 
@@ -515,19 +493,6 @@
   <script src="/js/live2d/SampleApp1.js"></script>
   <script>sampleApp1();</script>
 
-  
-  <!-- <script src="http://www.xuanno.net/static/public/live2d/lib/live2d.min.js"></script>
-
-  <script src="http://www.xuanno.net/static/public/live2d/framework/Live2DFramework.js"></script>
-
-  <script src="http://www.xuanno.net/static/public/live2d/utils/MatrixStack.js"></script>
-
-  <script src="http://www.xuanno.net/static/public/live2d/utils/ModelSettingJson.js"></script>
-  <script src="http://www.xuanno.net/static/public/live2d/PlatformManager.js"></script>
-  <script src="http://www.xuanno.net/static/public/live2d/LAppDefine.js"></script>
-  <script src="http://www.xuanno.net/static/public/live2d/LAppModel.js"></script>
-  <script src="http://www.xuanno.net/static/public/live2d/LAppLive2DManager.js"></script>
-  <script src="http://www.xuanno.net/static/public/live2d/SampleApp1.js"></script> -->
 
  
     <!-- partial model -->
@@ -542,18 +507,31 @@
   <i class="iconfont x-no icon-ziyuanldpi" ></i>
 </div> -->
 
+<!-- bg -->
+
+
 <!-- search -->
-<div class="fixed-back">
+<div class="fixed-back ani-box">
   <i class="iconfont x-no icon-upa"></i>
 </div>
 
 <a href="/">
-<div class="fixed-home">
+<div class="fixed-home ani-box">
   <i class="iconfont x-no icon-xuanzhongshangcheng"></i>
 </div>
 </a>
 
-<div class="container-fluid x-footer" >
+<div class="fixed-switch ani-box">
+  <i class="iconfont x-no icon-kaiguan1"></i>
+</div>
+<div class="fixed-bg">
+
+</div>
+<div class="fixed-bg-cover ani-box" id="fixed_bg_cover">
+
+</div>
+
+<div class="container-fluid x-footer ani-box" >
     <p class="web-info x-no">
       Copyright © 2020 Xowen [www.xowen.cn] All Rights Reserved
     </p>
@@ -599,7 +577,15 @@
             });
         });
     });
-    </script>   
+    </script>    <!-- 鼠标跟随 -->
+    <!-- <script>
+      let myBody = document.querySelector('body');
+      // console.log(myBody);
+      document.onmouseover = (e)=> {
+        
+        myBody.style.transform = "translateY(30px)"
+      } -->
+    </script>
 </body>
 
 </html>
