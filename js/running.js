@@ -132,6 +132,19 @@ var timer=null,timer2=null,Fcounter=true, SwitchPage=false;
       
     });
     
+    let aa = document.querySelector(".xowen-cover");
+    aa.onmousemove = (e)=> {
+      $(".xowen-cover").css({
+        "transform":`matrix(1.05, 0, 0, 1.05, ${e.clientX/70}, ${e.clientY/50})`,
+      })
+    }
+    aa.onmouseout = (e)=> {
+        $(".xowen-cover").css({
+          "transform":`matrix(1, 0, 0, 1, 0,0)`,
+        })
+    }
+  
+
     document.body.onmousemove = (e)=> {
       if(SwitchPage == true){
         $(".fixed-bg").css({
@@ -139,6 +152,7 @@ var timer=null,timer2=null,Fcounter=true, SwitchPage=false;
         })
       }
     }
+    
     document.body.onmouseout = (e)=> {
       if(SwitchPage == true){
         $(".fixed-bg").css({
